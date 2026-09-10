@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Diseño y desarrollo de páginas web en Mar del Plata. Sitios web ultra rápidos (100/100), optimizados para celulares y con contacto directo a WhatsApp.">
-    <title>Páginas Web en Mar del Plata | Diseños Ultra Rápidos y Económicos</title>
+    <meta name="description" content="Estudio de diseño y desarrollo web en Mar del Plata. Creamos sitios ultra rápidos, tiendas online y soluciones digitales para Argentina, Uruguay, Chile, Paraguay, Colombia, Brasil y Ecuador.">
+    <title>Páginas Web Mar del Plata | Estudio de Diseño y Desarrollo Web</title>
     <style>
-        /* CSS Integrado para Máxima Velocidad (100/100) */
+        /* Variables y Reset de Estilos */
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --whatsapp: #25d366;
-            --whatsapp-dark: #1eb956;
-            --text: #1f2937;
+            --primary: #dc2626; /* Rojo corporativo como la referencia */
+            --primary-dark: #b91c1c;
+            --secondary: #1e293b;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
             --bg-light: #f8fafc;
             --white: #ffffff;
+            --whatsapp: #25d366;
         }
 
         * {
@@ -23,18 +24,23 @@
             padding: 0;
         }
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: var(--text);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-            padding-bottom: 70px;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.5;
+            font-size: 17px; /* Tipografía más grande para lectura cómoda en móviles */
+        }
+
+        /* Encabezado y Navegación */
         header {
             background-color: var(--white);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 1rem 1.25rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,168 +49,380 @@
             z-index: 100;
         }
 
-        .logo {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
         }
 
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.3rem;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Banner Hero con Imagen de Fondo */
         .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 4rem 1.5rem;
             text-align: center;
-            padding: 3.5rem 1.5rem 2.5rem;
-            max-width: 800px;
+        }
+
+        .hero-content {
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.1rem;
-            margin-bottom: 1rem;
-            color: #111827;
-            line-height: 1.2;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            line-height: 1.25;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 1.8rem;
-            color: #4b5563;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #e2e8f0;
         }
 
-        .btn-ws {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: var(--whatsapp);
+        .btn-main {
+            display: inline-block;
+            background-color: var(--primary);
             color: var(--white);
-            padding: 0.9rem 1.8rem;
-            border-radius: 50px;
+            padding: 1rem 2rem;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            transition: transform 0.2s, background-color 0.2s;
+            font-size: 1.15rem;
+            transition: background-color 0.2s ease;
         }
 
-        .btn-ws:hover {
-            background-color: var(--whatsapp-dark);
-            transform: translateY(-2px);
+        .btn-main:hover {
+            background-color: var(--primary-dark);
         }
 
-        .stats-badge {
-            background-color: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            padding: 1.5rem;
-            border-radius: 12px;
+        /* Navegación por Subpáginas / Secciones */
+        .nav-subpages {
+            background-color: var(--secondary);
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-subpages a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 4px 8px;
+        }
+
+        .nav-subpages a:hover {
+            color: var(--white);
+        }
+
+        /* Sección del Indicador de Velocidad */
+        .badge-section {
+            padding: 2.5rem 1.5rem 1rem;
             text-align: center;
-            max-width: 650px;
-            margin: 1rem auto 2.5rem;
         }
 
-        .stats-badge h2 {
+        .speed-box {
+            background-color: var(--white);
+            border-left: 5px solid #22c55e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .speed-box h3 {
             color: #15803d;
             font-size: 1.3rem;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .features {
-            padding: 2.5rem 1.5rem;
-            background-color: var(--white);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
+        /* Servicios */
+        .services-section {
+            padding: 3.5rem 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .feature-card {
-            padding: 1.8rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
+        .section-title {
             text-align: center;
+            font-size: 1.9rem;
+            font-weight: 800;
+            margin-bottom: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-card {
             background: var(--white);
-        }
-
-        .feature-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        footer {
-            text-align: center;
+            border-radius: 12px;
             padding: 2rem 1.5rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-            background-color: var(--white);
-            border-top: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
         }
 
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #fee2e2;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .btn-info {
+            display: inline-block;
+            background-color: #64748b;
+            color: var(--white);
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Cobertura Internacional */
+        .reach-section {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .reach-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .country-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Sección de Clientes */
+        .clients-section {
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 2rem auto 0;
+            align-items: center;
+        }
+
+        .client-box {
+            padding: 1.2rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Botón Flotante WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: var(--whatsapp);
             color: white;
-            padding: 12px 22px;
+            padding: 14px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 1000;
             display: flex;
             align-items: center;
             gap: 8px;
         }
+
+        footer {
+            background-color: var(--text-dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Encabezado con Logotipo -->
     <header>
-        <div class="logo">Páginas Web MDP</div>
-        <a href="https://wa.me/5492236743622?text=Hola,%20busco%20presupuesto%20para%20una%20p%C3%A1gina%20web" class="btn-ws" style="padding: 0.5rem 1rem; font-size: 0.9rem;" target="_blank" rel="noopener">Pedir Cotización</a>
+        <a href="#" class="brand-logo">
+            <div class="logo-icon">M</div>
+            <div class="logo-text">
+                Páginas Web
+                <span>MAR DEL PLATA</span>
+            </div>
+        </a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20busco%20presupuesto%20para%20un%20proyecto%20web" class="btn-main" style="padding: 0.5rem 1rem; font-size: 0.9rem;" target="_blank" rel="noopener">Contacto</a>
     </header>
 
-    <section class="hero">
-        <h1>Diseño de Páginas Web en Mar del Plata</h1>
-        <p>Potencia tu comercio o emprendimiento con un sitio web ultra rápido (100/100 en Google) diseñado para recibir consultas directamente en tu WhatsApp.</p>
-        <a href="https://wa.me/5492236743622?text=Hola!%20Quiero%20solicitar%20un%20presupuesto%20para%20mi%20sitio%20web" class="btn-ws" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
-    </section>
+    <!-- Menú de Subpáginas Internas -->
+    <nav class="nav-subpages">
+        <a href="#inicio">Inicio</a>
+        <a href="#diseno-web">Diseño Web</a>
+        <a href="#tiendas">Tiendas Online</a>
+        <a href="#seo">Posicionamiento SEO</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#clientes">Clientes</a>
+    </nav>
 
-    <div class="stats-badge">
-        <h2>⚡ Páginas con 100/100 de Velocidad</h2>
-        <p>Sitios web ultra livianos que cargan al instante en cualquier teléfono celular, asegurando que ningún cliente se vaya por esperar demasiado.</p>
-    </div>
-
-    <section class="features">
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>📱 Adaptado a Celulares</h3>
-                <p>Navegación cómoda y fluida para que tus clientes marplatenses te contacten sin complicaciones.</p>
-            </div>
-            <div class="feature-card">
-                <h3>💬 Contacto Directo</h3>
-                <p>Integración directa con WhatsApp para que recibas las preguntas de venta al instante.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔍 Posicionamiento SEO</h3>
-                <p>Optimizada para aparecer en Google cuando busquen tus productos o servicios en la zona.</p>
-            </div>
+    <!-- Hero / Banner Principal -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Diseño Web a Distancia y Presencial</h1>
+            <p>Desde nuestro estudio de diseño web en Mar del Plata desarrollamos sitios profesionales, tiendas online y soluciones digitales para clientes de todo el país y Latinoamérica.</p>
+            <a href="https://wa.me/5492236743622?text=Hola!%20Quiero%20más%20información%20sobre%20sus%20servicios%20web" class="btn-main" target="_blank" rel="noopener">+ Solicitar Información</a>
         </div>
     </section>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/5492236743622?text=Hola!%20Me%20interesa%20crear%20una%20p%C3%A1gina%20web" class="whatsapp-float" target="_blank" rel="noopener">
+    <!-- Indicador de Rendimiento -->
+    <div class="badge-section">
+        <div class="speed-box">
+            <h3>⚡ 100/100 Velocidad & Optimización</h3>
+            <p>Creamos websites creativos, profesionales y ultra rápidos. Garantizamos la mejor velocidad de carga para que no pierdas ventas ni visitantes.</p>
+        </div>
+    </div>
+
+    <!-- Sección de Servicios (Subpáginas / Secciones) -->
+    <section class="services-section" id="diseno-web">
+        <h2 class="section-title">Soluciones Profesionales</h2>
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Diseño de Páginas Web</h3>
+            <p>Nos encargamos del diseño web de tu sitio o desarrollamos una solución a medida de tus necesidades. Aplicaciones online, sitios corporativos e institucionales.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Diseño%20de%20Páginas%20Web" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
+        </div>
+
+        <div class="service-card" id="tiendas">
+            <div class="service-icon">🛒</div>
+            <h3>Tiendas Online (E-Commerce)</h3>
+            <p>Plataformas de venta online sincronizadas con catálogo de productos, pasarelas de pago y envíos. Una herramienta comercial lista para vender las 24 horas.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Tiendas%20Online" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
+        </div>
+
+        <div class="service-card" id="seo">
+            <div class="service-icon">📈</div>
+            <h3>Posicionamiento Web (SEO)</h3>
+            <p>Solución integral para posicionar tu sitio web en los primeros resultados de Google. Atraemos tráfico calificado para hacer crecer tus consultas de negocio.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Posicionamiento%20SEO" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
+        </div>
+    </section>
+
+    <!-- Cobertura Internacional -->
+    <section class="reach-section" id="cobertura">
+        <h2>Alcance Nacional e Internacional</h2>
+        <p>Estés donde estés, llegamos a ti. Ofrecemos nuestros servicios en todo el país y el exterior:</p>
+        <div class="country-tags">
+            <span class="tag">🇦🇷 Argentina</span>
+            <span class="tag">🇺🇾 Uruguay</span>
+            <span class="tag">🇨🇱 Chile</span>
+            <span class="tag">🇵🇾 Paraguay</span>
+            <span class="tag">🇨🇴 Colombia</span>
+            <span class="tag">🇧🇷 Brasil</span>
+            <span class="tag">🇪🇨 Ecuador</span>
+        </div>
+    </section>
+
+    <!-- Sección de Clientes -->
+    <section class="clients-section" id="clientes">
+        <h2 class="section-title">Nuestros Clientes</h2>
+        <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">MÁS DE 1.500 CLIENTES CONFÍAN EN NOSOTROS</p>
+        
+        <div class="clients-grid">
+            <div class="client-box">HOTEL SHERATON</div>
+            <div class="client-box">COARSA S.A.</div>
+            <div class="client-box">TIMEX</div>
+            <div class="client-box">BAUZA FARMACIAS</div>
+        </div>
+    </section>
+
+    <!-- Botón Flotante permanente de WhatsApp -->
+    <a href="https://wa.me/5492236743622?text=Hola!%20Me%20interesa%20iniciar%20un%20proyecto%20web" class="whatsapp-float" target="_blank" rel="noopener">
         💬 WhatsApp
     </a>
 
     <footer>
-        <p>© 2026 Páginas Web Mar del Plata - Todos los derechos reservados</p>
+        <p>© 2026 Páginas Web Mar del Plata — Estudio de Diseño y Desarrollo Web</p>
     </footer>
 
 </body>
