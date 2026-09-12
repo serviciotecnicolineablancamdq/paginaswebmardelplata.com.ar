@@ -261,6 +261,81 @@
             font-size: 0.9rem;
         }
 
+        /* ESTILOS NUEVOS: Sección de Acordeones Interactivos Estilo Profesional */
+        .accordion-section {
+            padding: 1rem 1rem 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accordion-container {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .accordion-header:hover {
+            background-color: #f1f5f9;
+        }
+
+        .accordion-header .icon-toggle {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #fafafa;
+            padding: 0 1.5rem;
+        }
+
+        .accordion-content p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            line-height: 1.6;
+            padding-bottom: 1.2rem;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 300px; /* Altura máxima estimada para desplegar */
+            padding-top: 0.5rem;
+        }
+
+        .accordion-item.active .accordion-header .icon-toggle {
+            transform: rotate(45deg); /* Rota el ícono de + a x o similar al abrir */
+            color: var(--primary-dark);
+        }
+
         /* Cobertura Internacional */
         .reach-section {
             background-color: var(--secondary);
@@ -393,6 +468,7 @@
         <a href="#diseno-web">Diseño Web</a>
         <a href="#tiendas">Tiendas Online</a>
         <a href="#seo">Posicionamiento SEO</a>
+        <a href="#ventajas">Ventajas</a>
         <a href="#cobertura">Cobertura</a>
         <a href="#clientes">Clientes</a>
     </nav>
@@ -440,6 +516,57 @@
         </div>
     </section>
 
+    <!-- NUEVA SECCIÓN: Acordeón con SEO Nacional y Palabras Clave -->
+    <section class="accordion-section" id="ventajas">
+        <h2 class="section-title">¿Por qué elegirnos para tu proyecto digital?</h2>
+        
+        <div class="accordion-container">
+            <!-- Acordeón 1 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+ Desarrollo Web 100% Online para toda Argentina</span>
+                    <span class="icon-toggle">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>No importa si te encuentras en <strong>Misiones, Tierra del Fuego, Córdoba, Buenos Aires</strong> o cualquier otra provincia. Gestionamos proyectos de diseño de páginas web y tiendas online de forma totalmente remota, con comunicación fluida por WhatsApp, videollamadas y correo electrónico, garantizando entregas rápidas y eficientes.</p>
+                </div>
+            </div>
+
+            <!-- Acordeón 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+ Trabajo directo sin intermediarios</span>
+                    <span class="icon-toggle">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Ofrecemos un trato directo y personalizado con los desarrolladores de tu sitio. Al trabajar sin intermediarios ni agencias multinivel, optimizamos los tiempos de respuesta, abaratamos costos y aseguramos que cada detalle técnico y estético cumpla exactamente con lo que tu negocio necesita.</p>
+                </div>
+            </div>
+
+            <!-- Acordeón 3 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+ Sitios ultra rápidos y optimizados para Google (SEO)</span>
+                    <span class="icon-toggle">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Diseñamos sitios web profesionales ultrarrápidos adaptados a los algoritmos actuales de los motores de búsqueda. Maximizamos el rendimiento técnico para que tu negocio destaque en Google tanto localmente en Mar del Plata como a nivel nacional.</p>
+                </div>
+            </div>
+
+            <!-- Acordeón 4 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>+ Experiencia comprobada y soporte continuo</span>
+                    <span class="icon-toggle">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Contamos con más de 1.500 proyectos exitosos respaldando nuestra trayectoria. Brindamos soporte técnico permanente, asesoramiento integral en marketing digital y soluciones a medida para emprendedores, PyMEs y grandes empresas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Cobertura Internacional -->
     <section class="reach-section" id="cobertura">
         <h2>Alcance Nacional e Internacional</h2>
@@ -476,6 +603,26 @@
     <footer>
         <p>© 2026 Páginas Web Mar del Plata — Estudio de Diseño y Desarrollo Web</p>
     </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD PARA EL ACORDEÓN -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const isActive = accordionItem.classList.contains('active');
+                
+                // Cierra todos los demás acordeones (opcional, estilo acordeón exclusivo)
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Si no estaba activo, lo abre
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
