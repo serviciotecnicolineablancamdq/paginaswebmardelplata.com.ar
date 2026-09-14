@@ -6,7 +6,7 @@
     <meta name="description" content="Estudio de diseño y desarrollo web en Mar del Plata. Creamos sitios ultra rápidos, tiendas online y soluciones digitales para Argentina, Uruguay, Chile, Paraguay, Colombia, Brasil y Ecuador.">
     <title>Páginas Web Mar del Plata | Estudio de Diseño y Desarrollo Web</title>
 
-    <!-- INICIO DE CONFIGURACIÓN DE FAVICONS (Multiplataforma: Android, iOS, Escritorio) -->
+    <!-- INICIO DE CONFIGURACIÓN DE FAVICONS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,12 +32,12 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-tap-highlight-color: transparent; /* Elimina recuadro gris al tocar en iPhones */
+            -webkit-tap-highlight-color: transparent;
         }
 
         html {
             scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%; /* Previene cambio de tamaño de texto en Safari iOS */
+            -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
         }
 
@@ -47,7 +47,7 @@
             background-color: var(--bg-light);
             line-height: 1.5;
             font-size: 16px;
-            padding-bottom: 80px; /* Espacio para no obstruir con el botón de WhatsApp */
+            padding-bottom: 80px;
         }
 
         /* Encabezado adaptable */
@@ -107,12 +107,12 @@
             gap: 12px;
             overflow-x: auto;
             white-space: nowrap;
-            -webkit-overflow-scrolling: touch; /* Desplazamiento fluido en iPhone */
-            scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
         }
 
         .nav-subpages::-webkit-scrollbar {
-            display: none; /* Ocultar scrollbar en Chrome/Safari */
+            display: none;
         }
 
         .nav-subpages a {
@@ -261,7 +261,7 @@
             font-size: 0.9rem;
         }
 
-        /* ESTILOS NUEVOS: Sección de Acordeones Interactivos Estilo Profesional */
+        /* Sección de Acordeones Interactivos con Accesibilidad (a11y) */
         .accordion-section {
             padding: 1rem 1rem 2.5rem;
             max-width: 900px;
@@ -327,12 +327,12 @@
         }
 
         .accordion-item.active .accordion-content {
-            max-height: 300px; /* Altura máxima estimada para desplegar */
+            max-height: 300px;
             padding-top: 0.5rem;
         }
 
         .accordion-item.active .accordion-header .icon-toggle {
-            transform: rotate(45deg); /* Rota el ícono de + a x o similar al abrir */
+            transform: rotate(45deg);
             color: var(--primary-dark);
         }
 
@@ -398,7 +398,7 @@
             background: #fafafa;
         }
 
-        /* Botón Flotante WhatsApp para Celulares */
+        /* Botón Flotante WhatsApp */
         .whatsapp-float {
             position: fixed;
             bottom: 16px;
@@ -425,7 +425,6 @@
             font-size: 0.85rem;
         }
 
-        /* Ajustes para computadoras y tablets (pantallas > 768px) */
         @media (min-width: 768px) {
             body {
                 font-size: 17px;
@@ -516,51 +515,51 @@
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: Acordeón con SEO Nacional y Palabras Clave -->
+    <!-- ACORDEÓN CON ATRIBUTOS ARIA (Accesibilidad Integrada) -->
     <section class="accordion-section" id="ventajas">
         <h2 class="section-title">¿Por qué elegirnos para tu proyecto digital?</h2>
         
         <div class="accordion-container">
             <!-- Acordeón 1 -->
             <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" id="acc-header-1" aria-expanded="false" aria-controls="acc-content-1">
                     <span>+ Desarrollo Web 100% Online para toda Argentina</span>
-                    <span class="icon-toggle">+</span>
+                    <span class="icon-toggle" aria-hidden="true">+</span>
                 </button>
-                <div class="accordion-content">
+                <div class="accordion-content" id="acc-content-1" role="region" aria-labelledby="acc-header-1">
                     <p>No importa si te encuentras en <strong>Misiones, Tierra del Fuego, Córdoba, Buenos Aires</strong> o cualquier otra provincia. Gestionamos proyectos de diseño de páginas web y tiendas online de forma totalmente remota, con comunicación fluida por WhatsApp, videollamadas y correo electrónico, garantizando entregas rápidas y eficientes.</p>
                 </div>
             </div>
 
             <!-- Acordeón 2 -->
             <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" id="acc-header-2" aria-expanded="false" aria-controls="acc-content-2">
                     <span>+ Trabajo directo sin intermediarios</span>
-                    <span class="icon-toggle">+</span>
+                    <span class="icon-toggle" aria-hidden="true">+</span>
                 </button>
-                <div class="accordion-content">
+                <div class="accordion-content" id="acc-content-2" role="region" aria-labelledby="acc-header-2">
                     <p>Ofrecemos un trato directo y personalizado con los desarrolladores de tu sitio. Al trabajar sin intermediarios ni agencias multinivel, optimizamos los tiempos de respuesta, abaratamos costos y aseguramos que cada detalle técnico y estético cumpla exactamente con lo que tu negocio necesita.</p>
                 </div>
             </div>
 
             <!-- Acordeón 3 -->
             <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" id="acc-header-3" aria-expanded="false" aria-controls="acc-content-3">
                     <span>+ Sitios ultra rápidos y optimizados para Google (SEO)</span>
-                    <span class="icon-toggle">+</span>
+                    <span class="icon-toggle" aria-hidden="true">+</span>
                 </button>
-                <div class="accordion-content">
+                <div class="accordion-content" id="acc-content-3" role="region" aria-labelledby="acc-header-3">
                     <p>Diseñamos sitios web profesionales ultrarrápidos adaptados a los algoritmos actuales de los motores de búsqueda. Maximizamos el rendimiento técnico para que tu negocio destaque en Google tanto localmente en Mar del Plata como a nivel nacional.</p>
                 </div>
             </div>
 
             <!-- Acordeón 4 -->
             <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" id="acc-header-4" aria-expanded="false" aria-controls="acc-content-4">
                     <span>+ Experiencia comprobada y soporte continuo</span>
-                    <span class="icon-toggle">+</span>
+                    <span class="icon-toggle" aria-hidden="true">+</span>
                 </button>
-                <div class="accordion-content">
+                <div class="accordion-content" id="acc-content-4" role="region" aria-labelledby="acc-header-4">
                     <p>Contamos con más de 1.500 proyectos exitosos respaldando nuestra trayectoria. Brindamos soporte técnico permanente, asesoramiento integral en marketing digital y soluciones a medida para emprendedores, PyMEs y grandes empresas.</p>
                 </div>
             </div>
@@ -604,21 +603,24 @@
         <p>© 2026 Páginas Web Mar del Plata — Estudio de Diseño y Desarrollo Web</p>
     </footer>
 
-    <!-- SCRIPT DE INTERACTIVIDAD PARA EL ACORDEÓN -->
+    <!-- SCRIPT DE INTERACTIVIDAD + GESTIÓN DE ATRIBUTOS ARIA -->
     <script>
         document.querySelectorAll('.accordion-header').forEach(button => {
             button.addEventListener('click', () => {
                 const accordionItem = button.parentElement;
                 const isActive = accordionItem.classList.contains('active');
                 
-                // Cierra todos los demás acordeones (opcional, estilo acordeón exclusivo)
+                // Cierra todos los demás acordeones y actualiza su estado ARIA
                 document.querySelectorAll('.accordion-item').forEach(item => {
                     item.classList.remove('active');
+                    const btn = item.querySelector('.accordion-header');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
                 });
 
-                // Si no estaba activo, lo abre
+                // Si no estaba activo, lo abre y cambia su aria-expanded a true
                 if (!isActive) {
                     accordionItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
                 }
             });
         });
