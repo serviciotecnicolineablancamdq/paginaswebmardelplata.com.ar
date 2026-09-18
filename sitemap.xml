@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://paginaswebmardelplata.com.ar/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <!-- Página Principal -->
+    <url>
+        <loc>https://reparacionesgonzamdq.com/</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Páginas Regionales -->
+    <url>
+        <loc>https://reparacionesgonzamdq.com/caba.html</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://reparacionesgonzamdq.com/cordoba.html</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://reparacionesgonzamdq.com/rosario.html</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://reparacionesgonzamdq.com/mendoza.html</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
