@@ -122,6 +122,81 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Secciones de servicios detallados (ahora arriba) */
+        .services-section {
+            background: var(--white);
+            padding: 2.5rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .services-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .service-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-block h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .service-block p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .checks-list {
+            list-style: none;
+            margin-bottom: 1.2rem;
+        }
+
+        .checks-list li {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .checks-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 900;
+            font-size: 1rem;
+        }
+
+        .btn-service {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-service:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Secciones de Regiones (ahora abajo) */
         .regions-section {
             padding: 2.5rem 1rem;
             max-width: 800px;
@@ -205,80 +280,6 @@
             margin-left: 4px;
         }
 
-        /* Secciones de servicios detallados / subpáginas */
-        .services-section {
-            background: var(--white);
-            padding: 3rem 1rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .services-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .service-block {
-            margin-bottom: 3rem;
-        }
-
-        .service-block:last-child {
-            margin-bottom: 0;
-        }
-
-        .service-block h2 {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 0.6rem;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-
-        .service-block p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .checks-list {
-            list-style: none;
-            margin-bottom: 1.2rem;
-        }
-
-        .checks-list li {
-            color: var(--text-dark);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .checks-list li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 900;
-            font-size: 1rem;
-        }
-
-        .btn-service {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.75rem 1.25rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
-        }
-
-        .btn-service:hover {
-            background-color: var(--primary-dark);
-        }
-
         .whatsapp-float {
             position: fixed;
             bottom: 16px;
@@ -326,7 +327,62 @@
         </div>
     </section>
 
-    <!-- Tarjetas de Regiones con Flechas Azules -->
+    <!-- Secciones de Servicios detallados (Arriba) -->
+    <section class="services-section">
+        <div class="services-inner">
+            
+            <!-- Institucional / General -->
+            <div class="service-block">
+                <ul class="checks-list">
+                    <li>Diseño Responsive y moderno</li>
+                    <li>Secciones autoadministrables</li>
+                    <li>Integración directa con redes sociales y WhatsApp</li>
+                    <li>Certificado de seguridad SSL incluido</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20pedir%20un%20presupuesto%20web" class="btn-service" target="_blank" rel="noopener">Pedir Presupuesto Web</a>
+            </div>
+
+            <!-- Tiendas Online -->
+            <div class="service-block">
+                <h2>Tiendas Online (E-Commerce)</h2>
+                <p>Tu negocio abierto las 24 horas vendiendo en toda Argentina. Configuramos tu catálogo completo, medios de pago seguros (Mercado Pago, tarjetas, transferencias) y pasarelas de envíos logísticos.</p>
+                <ul class="checks-list">
+                    <li>Gestión ilimitada de productos y stock</li>
+                    <li>Cobros integrados sin comisiones extras por venta</li>
+                    <li>Panel de control intuitivo y fácil de usar</li>
+                    <li>Diseño orientado a la conversión de ventas</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20crear%20mi%20Tienda%20Online" class="btn-service" target="_blank" rel="noopener">Crear mi Tienda Online</a>
+            </div>
+
+            <!-- SEO y GEO -->
+            <div class="service-block">
+                <h2>Posicionamiento SEO y GEO (IA)</h2>
+                <p>Aparecé en los primeros resultados de Google cuando tus clientes busquen tus servicios. Además, optimizamos tu sitio para que los nuevos motores de búsqueda basados en Inteligencia Artificial recomienden tu negocio.</p>
+                <ul class="checks-list">
+                    <li>Optimización técnica SEO On-Page</li>
+                    <li>Estrategia de palabras clave locales (Mar del Plata y zona)</li>
+                    <li>Autoridad de dominio y velocidad de respuesta</li>
+                    <li>Preparación para búsquedas conversacionales en IA</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20mejorar%20mi%20SEO" class="btn-service" target="_blank" rel="noopener">Mejorar mi SEO</a>
+            </div>
+
+            <!-- Quiénes Somos -->
+            <div class="service-block">
+                <h2>Quiénes Somos</h2>
+                <p>Somos un estudio especializado en desarrollo técnico y diseño digital radicado en Mar del Plata. Ayudamos a profesionales, PyMEs y comercios a consolidar su presencia en internet con herramientas robustas, seguras y de alto impacto visual.</p>
+                <ul class="checks-list">
+                    <li>Más de 1.500 proyectos entregados exitosamente</li>
+                    <li>Soporte técnico y asesoramiento permanente</li>
+                    <li>Tecnología de última generación</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tarjetas de Regiones con Flechas Azules (Abajo) -->
     <main class="regions-section">
         <h2 class="section-title">Presencia en todo el país</h2>
         <p class="section-subtitle">Elegí tu región para conocer nuestras propuestas específicas:</p>
@@ -371,61 +427,6 @@
             </a>
         </div>
     </main>
-
-    <!-- Secciones adicionales detalladas -->
-    <section class="services-section">
-        <div class="services-inner">
-            
-            <!-- Institucional / General -->
-            <div class="service-block">
-                <ul class="checks-list">
-                    <li>Diseño Responsive y moderno</li>
-                    <li>Secciones autoadministrables</li>
-                    <li>Integración directa con redes sociales y WhatsApp</li>
-                    <li>Certificado de seguridad SSL incluido</li>
-                </ul>
-                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20pedir%20un%20presupuesto%20web" class="btn-service" target="_blank" rel="noopener">Pedir Presupuesto Web</a>
-            </div>
-
-            <!-- Tiendas Online -->
-            <div class="service-block">
-                <h2>Subpágina: Tiendas Online (E-Commerce)</h2>
-                <p>Tu negocio abierto las 24 horas vendiendo en toda Argentina. Configuramos tu catálogo completo, medios de pago seguros (Mercado Pago, tarjetas, transferencias) y pasarelas de envíos logísticos.</p>
-                <ul class="checks-list">
-                    <li>Gestión ilimitada de productos y stock</li>
-                    <li>Cobros integrados sin comisiones extras por venta</li>
-                    <li>Panel de control intuitivo y fácil de usar</li>
-                    <li>Diseño orientado a la conversión de ventas</li>
-                </ul>
-                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20crear%20mi%20Tienda%20Online" class="btn-service" target="_blank" rel="noopener">Crear mi Tienda Online</a>
-            </div>
-
-            <!-- SEO y GEO -->
-            <div class="service-block">
-                <h2>Subpágina: Posicionamiento SEO y GEO (IA)</h2>
-                <p>Aparecé en los primeros resultados de Google cuando tus clientes busquen tus servicios. Además, optimizamos tu sitio para que los nuevos motores de búsqueda basados en Inteligencia Artificial recomienden tu negocio.</p>
-                <ul class="checks-list">
-                    <li>Optimización técnica SEO On-Page</li>
-                    <li>Estrategia de palabras clave locales (Mar del Plata y zona)</li>
-                    <li>Autoridad de dominio y velocidad de respuesta</li>
-                    <li>Preparación for búsquedas conversacionales en IA</li>
-                </ul>
-                <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20mejorar%20mi%20SEO" class="btn-service" target="_blank" rel="noopener">Mejorar mi SEO</a>
-            </div>
-
-            <!-- Quiénes Somos -->
-            <div class="service-block">
-                <h2>Subpágina: Quiénes Somos</h2>
-                <p>Somos un estudio especializado en desarrollo técnico y diseño digital radicado en Mar del Plata. Ayudamos a profesionales, PyMEs y comercios a consolidar su presencia en internet con herramientas robustas, seguras y de alto impacto visual.</p>
-                <ul class="checks-list">
-                    <li>Más de 1.500 proyectos entregados exitosamente</li>
-                    <li>Soporte técnico y asesoramiento permanente</li>
-                    <li>Tecnología de última generación</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
 
     <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20principal%20y%20quiero%20consultar" class="whatsapp-float" target="_blank" rel="noopener">
         💬 WhatsApp
