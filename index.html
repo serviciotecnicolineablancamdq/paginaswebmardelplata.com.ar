@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Desarrollo web profesional, tiendas online, SEO y servicios en Mar del Plata y todo el país.">
-    <title>Páginas Web Mar del Plata | Desarrollo y Posicionamiento</title>
+    <meta name="description" content="Agencia de diseño web profesional en Mar del Plata. Creamos páginas web, tiendas online y estrategias SEO para potenciar negocios en todo el país.">
+    <title>Páginas Web Mar del Plata | Diseño Web Profesional y Tiendas Online</title>
 
     <style>
         :root {
@@ -16,6 +16,7 @@
             --bg-light: #f8fafc;
             --white: #ffffff;
             --whatsapp: #25d366;
+            --accent-blue: #2563eb; /* Color azul para las flechas e indicadores */
         }
 
         * {
@@ -33,7 +34,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: var(--text-dark);
             background-color: var(--bg-light);
-            line-height: 1.5;
+            line-height: 1.6;
             font-size: 16px;
             padding-bottom: 80px;
         }
@@ -96,39 +97,10 @@
             font-size: 0.85rem;
         }
 
-        .nav-dropdown-container {
-            background-color: var(--secondary);
-            padding: 0.5rem 1rem;
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .dropbtn {
-            background: transparent;
-            color: #cbd5e1;
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .dropbtn:hover {
-            color: var(--white);
-            background: rgba(255,255,255,0.15);
-        }
-
         .hero {
-            position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
-                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, var(--secondary) 0%, #0f172a 100%);
             color: var(--white);
-            padding: 3rem 1.25rem;
+            padding: 3.5rem 1.25rem;
             text-align: center;
         }
 
@@ -140,113 +112,51 @@
         .hero h1 {
             font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.05rem;
-            margin-bottom: 1.8rem;
-            color: #e2e8f0;
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
         }
 
-        .btn-main {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.9rem 1.6rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
-        }
-
-        .btn-main:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .content-section {
-            background: var(--white);
-            padding: 2.5rem 1.25rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .section-inner {
+        .regions-section {
+            padding: 2.5rem 1rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .content-section h2 {
-            font-size: 1.5rem;
+        .section-title {
+            text-align: center;
+            font-size: 1.4rem;
             font-weight: 800;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .content-section p {
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
             color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .checks-list {
-            list-style: none;
-            margin-bottom: 1.8rem;
-        }
-
-        .checks-list li {
-            color: var(--text-dark);
-            font-size: 0.95rem;
-            margin-bottom: 0.7rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .checks-list li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: 900;
-            font-size: 1.1rem;
-        }
-
-        .btn-action {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.8rem 1.4rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        /* Sección de Etiquetas Regionales */
-        .regions-section {
-            padding: 3rem 1rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: var(--bg-light);
-        }
-
-        .regions-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            margin-bottom: 2rem;
         }
 
         .region-card {
             background: var(--white);
-            border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 1.8rem 1.2rem;
+            padding: 1.8rem 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .region-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
         }
 
         .region-icon {
@@ -255,28 +165,52 @@
         }
 
         .region-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--text-dark);
             margin-bottom: 0.6rem;
         }
 
         .region-card p {
+            font-size: 0.95rem;
             color: var(--text-muted);
-            font-size: 0.92rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .btn-region {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background-color: var(--primary);
             color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin: 0 auto;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+            transition: background-color 0.2s;
+        }
+
+        .btn-region:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Estilo para la flecha azul de acceso */
+        .arrow-indicator {
+            background-color: var(--accent-blue);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 900;
+            margin-left: 4px;
         }
 
         .whatsapp-float {
@@ -304,144 +238,74 @@
             padding: 1.8rem 1rem;
             font-size: 0.85rem;
         }
-
-        @media (min-width: 768px) {
-            .regions-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
     <header>
-        <a href="#inicio" class="brand-logo">
+        <a href="index.html" class="brand-logo">
             <div class="logo-icon">M</div>
             <div class="logo-text">
                 Páginas Web
                 <span>MAR DEL PLATA</span>
             </div>
         </a>
-        <a href="https://wa.me/5492236743622?text=Hola,%20busco%20presupuesto" class="btn-contacto-header" target="_blank" rel="noopener">Contacto</a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20consultar%20sobre%20diseño%20web" class="btn-contacto-header" target="_blank" rel="noopener">Contacto</a>
     </header>
 
-    <!-- Menú de Navegación -->
-    <nav class="nav-dropdown-container">
-        <a href="#inicio" class="dropbtn">INICIO</a>
-        <a href="#diseno-web" class="dropbtn">DISEÑO WEB</a>
-        <a href="#tiendas" class="dropbtn">TIENDAS ONLINE</a>
-        <a href="#seo" class="dropbtn">SEO & IA</a>
-        <a href="#regiones" class="dropbtn">DESTINOS</a>
-    </nav>
-
-    <!-- Hero Principal -->
-    <section class="hero" id="inicio">
+    <section class="hero">
         <div class="hero-content">
-            <h1>Desarrollo Web Profesional en Mar del Plata</h1>
-            <p>Soluciones digitales a medida para escalar tu emprendimiento o empresa al siguiente nivel.</p>
-            <a href="https://wa.me/5492236743622?text=Hola!%20Quiero%20empezar%20mi%20proyecto" class="btn-main" target="_blank" rel="noopener">+ Iniciar Proyecto</a>
+            <h1>Diseño Web Profesional en Mar del Plata</h1>
+            <p>Creamos páginas web, tiendas online y soluciones digitales de alto rendimiento para potenciar tu negocio.</p>
         </div>
     </section>
 
-    <!-- SECCIÓN 1: Diseño de Páginas Web -->
-    <section class="content-section" id="diseno-web">
-        <div class="section-inner">
-            <h2>Diseño de Páginas Web</h2>
-            <p>Creamos sitios web institucionales y corporativos optimizados para convertir visitantes en clientes. Diseños 100% adaptados a celulares, tablets y computadoras, con una velocidad de carga óptima.</p>
-            <ul class="checks-list">
-                <li>Diseño Responsive y moderno</li>
-                <li>Secciones autoadministrables</li>
-                <li>Integración directa con redes sociales y WhatsApp</li>
-                <li>Certificado de seguridad SSL incluido</li>
-            </ul>
-            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20pedir%20presupuesto%20web" class="btn-action" target="_blank" rel="noopener">Pedir Presupuesto Web</a>
-        </div>
-    </section>
+    <main class="regions-section">
+        <h2 class="section-title">Presencia en todo el país</h2>
+        <p class="section-subtitle">Elegí tu región para conocer nuestras propuestas específicas:</p>
 
-    <!-- SECCIÓN 2: Tiendas Online -->
-    <section class="content-section" id="tiendas">
-        <div class="section-inner">
-            <h2>Tiendas Online (E-Commerce)</h2>
-            <p>Tu negocio abierto las 24 horas vendiendo en toda Argentina. Configuramos tu catálogo completo, medios de pago seguros (Mercado Pago, tarjetas, transferencias) y pasarelas de envíos logísticos.</p>
-            <ul class="checks-list">
-                <li>Gestión ilimitada de productos y stock</li>
-                <li>Cobros integrados sin comisiones extras por venta</li>
-                <li>Panel de control intuitivo y fácil de usar</li>
-                <li>Diseño orientado a la conversión de ventas</li>
-            </ul>
-            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20crear%20mi%20tienda%20online" class="btn-action" target="_blank" rel="noopener">Crear mi Tienda Online</a>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 3: Posicionamiento SEO -->
-    <section class="content-section" id="seo">
-        <div class="section-inner">
-            <h2>Posicionamiento SEO y GEO (IA)</h2>
-            <p>Aparecé en los primeros resultados de Google cuando tus clientes busquen tus servicios. Además, optimizamos tu sitio para que los nuevos motores de búsqueda basados en Inteligencia Artificial recomienden tu negocio.</p>
-            <ul class="checks-list">
-                <li>Optimización técnica SEO On-Page</li>
-                <li>Estrategia de palabras clave locales (Mar del Plata y zona)</li>
-                <li>Autoridad de dominio y velocidad de respuesta</li>
-                <li>Preparación para búsquedas conversacionales en IA</li>
-            </ul>
-            <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20mejorar%20mi%20SEO" class="btn-action" target="_blank" rel="noopener">Mejorar mi SEO</a>
-        </div>
-    </section>
-
-    <!-- LAS 4 ETIQUETAS / TARJETAS REGIONALES -->
-    <section class="regions-section" id="regiones">
-        <div style="max-width: 800px; margin: 0 auto 2rem auto; text-align: center;">
-            <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 0.5rem;">Presencia en todo el país</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Elegí tu región para conocer nuestras propuestas específicas:</p>
+        <!-- Tarjeta CABA -->
+        <div class="region-card">
+            <div class="region-icon">🏛️</div>
+            <h3>Diseño web en CABA</h3>
+            <p>Desarrollo especializado para Capital Federal con enfoque comercial y alta conversión.</p>
+            <a href="caba.html" class="btn-region">
+                Ver Diseño web en CABA <span class="arrow-indicator">→</span>
+            </a>
         </div>
 
-        <div class="regions-grid">
-            <!-- 1. CABA -->
-            <div class="region-card">
-                <div>
-                    <div class="region-icon">🏛️</div>
-                    <h3>Diseño web en CABA</h3>
-                    <p>Desarrollo especializado para Capital Federal con enfoque comercial y alta conversión.</p>
-                </div>
-                <a href="caba.html" class="btn-region">Ver Diseño web en CABA</a>
-            </div>
-
-            <!-- 2. Córdoba Capital -->
-            <div class="region-card">
-                <div>
-                    <div class="region-icon">🏙️</div>
-                    <h3>Diseño web en Córdoba Capital</h3>
-                    <p>Sitios web profesionales y tiendas online para potenciar empresas cordobesas.</p>
-                </div>
-                <a href="cordoba.html" class="btn-region">Ver Diseño web en Córdoba Capital</a>
-            </div>
-
-            <!-- 3. Rosario Santa Fe -->
-            <div class="region-card">
-                <div>
-                    <div class="region-icon">⚓</div>
-                    <h3>Diseño web Rosario Santa Fe</h3>
-                    <p>Soluciones digitales a medida orientadas al mercado y polo comercial santafesino.</p>
-                </div>
-                <a href="rosario.html" class="btn-region">Ver Diseño web Rosario Santa Fe</a>
-            </div>
-
-            <!-- 4. Mendoza -->
-            <div class="region-card">
-                <div>
-                    <div class="region-icon">🍇</div>
-                    <h3>Diseño web en Mendoza</h3>
-                    <p>Diseño web moderno adaptado a servicios, turismo, bodegas y comercios mendocinos.</p>
-                </div>
-                <a href="mendoza.html" class="btn-region">Ver Diseño web en Mendoza</a>
-            </div>
+        <!-- Tarjeta Córdoba -->
+        <div class="region-card">
+            <div class="region-icon">🏙️</div>
+            <h3>Diseño web en Córdoba Capital</h3>
+            <p>Sitios web profesionales y tiendas online para potenciar empresas cordobesas.</p>
+            <a href="cordoba.html" class="btn-region">
+                Ver Diseño web en Córdoba Capital <span class="arrow-indicator">→</span>
+            </a>
         </div>
-    </section>
 
-    <!-- Botón WhatsApp -->
-    <a href="https://wa.me/5492236743622?text=Hola!%20Me%20interesa%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
+        <!-- Tarjeta Rosario -->
+        <div class="region-card">
+            <div class="region-icon">⚓</div>
+            <h3>Diseño web en Rosario</h3>
+            <p>Soluciones digitales orientadas al comercio, la industria y servicios del Litoral.</p>
+            <a href="rosario.html" class="btn-region">
+                Ver Diseño web en Rosario <span class="arrow-indicator">→</span>
+            </a>
+        </div>
+
+        <!-- Tarjeta Mendoza -->
+        <div class="region-card">
+            <div class="region-icon">🍇</div>
+            <h3>Diseño web en Mendoza</h3>
+            <p>Páginas web a medida para bodegas, turismo, comercios y servicios mendocinos.</p>
+            <a href="mendoza.html" class="btn-region">
+                Ver Diseño web en Mendoza <span class="arrow-indicator">→</span>
+            </a>
+        </div>
+    </main>
+
+    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20principal%20y%20quiero%20consultar" class="whatsapp-float" target="_blank" rel="noopener">
         💬 WhatsApp
     </a>
 
@@ -451,4 +315,3 @@
 
 </body>
 </html>
-
