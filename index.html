@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Diseño de páginas web y tiendas online en Mar del Plata. Estudio de desarrollo web profesional, ecommerce rápidos y posicionamiento SEO para empresas y emprendedores.">
-    <title>Diseño de Páginas Web en Mar del Plata | Tiendas Online y SEO</title>
+    <meta name="description" content="Diseño de páginas web, tiendas online y posicionamiento SEO en Mar del Plata. Servicios profesionales de desarrollo web y marketing digital.">
+    <title>Servicios de Diseño Web y Tiendas Online en Mar del Plata</title>
 
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -93,7 +93,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Menú de Navegación Desplegable estilo Competencia */
+        /* Menú de Navegación */
         .nav-dropdown-container {
             background-color: var(--secondary);
             padding: 0.5rem 1rem;
@@ -157,12 +157,11 @@
             color: var(--primary);
         }
 
-        /* Mostrar menú al hacer hover o toque en móviles */
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        /* Hero / Banner Principal */
+        /* Hero Principal */
         .hero {
             position: relative;
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
@@ -206,175 +205,49 @@
             background-color: var(--primary-dark);
         }
 
-        /* Sección Trabajos / Casos de Éxito */
-        .works-section {
-            padding: 3rem 1rem;
+        /* Secciones de Subpáginas Integradas */
+        .subpage-section {
+            padding: 4rem 1rem;
             max-width: 900px;
             margin: 0 auto;
-            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .works-intro {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
-        .works-intro h2 {
-            font-size: 1.5rem;
+        .subpage-section h2 {
+            font-size: 1.8rem;
             color: var(--text-dark);
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
         }
 
-        .works-intro p {
+        .subpage-section p {
             color: var(--text-muted);
-            font-size: 0.98rem;
-            line-height: 1.6;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 1.5rem;
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
         }
 
-        .industry-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 1rem;
-            border-radius: 8px;
+        .features-list li {
+            padding: 8px 0;
             font-weight: 600;
             color: var(--text-dark);
-            font-size: 0.95rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        /* Servicios */
-        .services-section {
-            padding: 1.5rem 1rem 2.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 2rem;
-            color: var(--text-dark);
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.8rem 1.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid #e2e8f0;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background-color: #fee2e2;
-            color: var(--primary);
-            border-radius: 50%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin: 0 auto 1rem;
+            gap: 10px;
         }
 
-        .service-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.6rem;
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 900;
         }
 
-        .service-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.2rem;
-            font-size: 0.98rem;
-        }
-
-        .btn-info {
-            display: inline-block;
-            background-color: #64748b;
-            color: var(--white);
-            padding: 0.6rem 1.4rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Cobertura Internacional */
-        .reach-section {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 2.5rem 1rem;
-            text-align: center;
-        }
-
-        .reach-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .reach-section p {
-            font-size: 0.95rem;
-            color: #cbd5e1;
-        }
-
-        .country-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 1.2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .tag {
-            background: rgba(255,255,255,0.1);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-
-        /* Sección Clientes */
-        .clients-section {
-            padding: 2.5rem 1rem;
-            text-align: center;
-            background-color: var(--white);
-        }
-
-        .clients-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            max-width: 700px;
-            margin: 1.5rem auto 0;
-            display: grid;
-        }
-
-        .client-box {
-            padding: 1rem 0.5rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-weight: 700;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            background: #fafafa;
-        }
-
+        /* Botón WhatsApp Flotante */
         .whatsapp-float {
             position: fixed;
             bottom: 16px;
@@ -405,142 +278,99 @@
             body { font-size: 17px; }
             .hero { padding: 5rem 1.5rem; }
             .hero h1 { font-size: 2.4rem; }
-            .industries-grid { grid-template-columns: repeat(3, 1fr); }
-            .clients-grid { grid-template-columns: repeat(4, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado con Logotipo -->
+    <!-- Encabezado -->
     <header>
-        <a href="#" class="brand-logo">
+        <a href="#inicio" class="brand-logo">
             <div class="logo-icon">M</div>
             <div class="logo-text">
                 Páginas Web
                 <span>MAR DEL PLATA</span>
             </div>
         </a>
-        <a href="https://wa.me/5492236743622?text=Hola,%20busco%20presupuesto%20para%20un%20proyecto%20web" class="btn-main" style="padding: 0.5rem 0.9rem; font-size: 0.85rem;" target="_blank" rel="noopener">Contacto</a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20busco%20presupuesto" class="btn-main" style="padding: 0.5rem 0.9rem; font-size: 0.85rem;" target="_blank" rel="noopener">Contacto</a>
     </header>
 
-    <!-- Menú de Navegación Desplegable (Estilo Competencia) -->
+    <!-- Menú con Enlaces a Subpáginas (Secciones) -->
     <nav class="nav-dropdown-container">
-        <div class="dropdown">
-            <a href="#trabajos" class="dropbtn">TRABAJOS ▾</a>
-            <div class="dropdown-content">
-                <a href="#trabajos">Casos de Éxito</a>
-                <a href="#trabajos">Proyectos por Industrias</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <a href="#servicios" class="dropbtn">SERVICIOS ▾</a>
-            <div class="dropdown-content">
-                <a href="#diseno-web">Diseño de Páginas Web</a>
-                <a href="#seo">Posicionamiento en IA (GEO)</a>
-                <a href="#tiendas">Tiendas Online</a>
-                <a href="#seo">Posicionamiento Web</a>
-                <a href="#servicios">Registro de Dominios</a>
-                <a href="#servicios">Alojamiento de Sitios Web</a>
-                <a href="#servicios">Asesoramiento</a>
-                <a href="#servicios">eMarketing</a>
-            </div>
-        </div>
-
-        <a href="#tiendas" class="dropbtn" style="background:transparent;">TIENDAS ONLINE</a>
+        <a href="#inicio" class="dropbtn" style="background:transparent;">INICIO</a>
         <a href="#diseno-web" class="dropbtn" style="background:transparent;">DISEÑO WEB</a>
-        <a href="#cobertura" class="dropbtn" style="background:transparent;">QUIENES SOMOS</a>
+        <a href="#tiendas-online" class="dropbtn" style="background:transparent;">TIENDAS ONLINE</a>
+        <a href="#posicionamiento" class="dropbtn" style="background:transparent;">SEO & IA</a>
+        <a href="#quienes-somos" class="dropbtn" style="background:transparent;">QUIÉNES SOMOS</a>
     </nav>
 
-    <!-- Hero / Banner Principal -->
+    <!-- Banner Principal -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>Diseño de Páginas Web en Mar del Plata y Tiendas Online</h1>
-            <p>Creamos sitios web profesionales, tiendas ecommerce autoadministrables y soluciones de posicionamiento SEO para potenciar tu negocio a nivel local y nacional.</p>
-            <a href="https://wa.me/5492236743622?text=Hola!%20Quiero%20más%20información%20sobre%20sus%20servicios%20web" class="btn-main" target="_blank" rel="noopener">+ Solicitar Información</a>
+            <h1>Desarrollo Web Profesional en Mar del Plata</h1>
+            <p>Soluciones digitales a medida para escalar tu emprendimiento o empresa al siguiente nivel.</p>
+            <a href="https://wa.me/5492236743622?text=Hola!%20Quiero%20empezar%20mi%20proyecto%20web" class="btn-main" target="_blank" rel="noopener">+ Iniciar Proyecto</a>
         </div>
     </section>
 
-    <!-- Sección Trabajos y Casos de Éxito -->
-    <section class="works-section" id="trabajos">
-        <div class="works-intro">
-            <h2>Convierte tu web en un verdadero negocio online</h2>
-            <p>Diseño de Páginas Web para Empresas, Profesionales, Comercios, Alojamientos, Industrias, Restaurantes, Inmobiliarias, Construcción, Software y Electrónica.</p>
-            
-            <div class="industries-grid">
-                <div class="industry-card">🏢 Empresas y PyMEs</div>
-                <div class="industry-card">🏨 Alojamientos y Hoteles</div>
-                <div class="industry-card">🍽️ Gastronomía y Restaurantes</div>
-                <div class="industry-card">🏗️ Inmobiliarias y Construcción</div>
-                <div class="industry-card">⚡ Electrónica y Tecnología</div>
-                <div class="industry-card">🛍️ Comercios y Tiendas</div>
-            </div>
-        </div>
+    <!-- SUBPÁGINA 1: Diseño Web -->
+    <section class="subpage-section" id="diseno-web">
+        <h2>Subpágina: Diseño de Páginas Web</h2>
+        <p>Creamos sitios web institucionales y corporativos optimizados para convertir visitantes en clientes. Diseños 100% adaptados a celulares, tablets y computadoras, con una velocidad de carga óptima.</p>
+        <ul class="features-list">
+            <li>Diseño Responsive y moderno</li>
+            <li>Secciones autoadministrables</li>
+            <li>Integración directa con redes sociales y WhatsApp</li>
+            <li>Certificado de seguridad SSL incluido</li>
+        </ul>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20contratar%20Diseño%20Web" class="btn-main" target="_blank" rel="noopener">Pedir Presupuesto Web</a>
     </section>
 
-    <!-- Servicios -->
-    <section class="services-section" id="servicios">
-        <h2 class="section-title">Nuestros Servicios Profesionales</h2>
-
-        <div class="service-card" id="diseno-web">
-            <div class="service-icon">💻</div>
-            <h3>Diseño de Páginas Web</h3>
-            <p>El diseño de cada sitio web en Mar del Plata es realizado con tecnología multimedia de última generación, obteniendo resultados de alto poder visual y ágil navegación para todo tipo de dispositivos: PC, tabletas y celulares.</p>
-            <p style="color: var(--text-muted); margin-bottom: 1.2rem; font-size: 0.98rem;">Creamos y mejoramos la imagen web corporativa de nuestros clientes en total alineación con su identidad, utilizando contenidos claros para su público objetivo.</p>
-            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Diseño%20de%20Páginas%20Web" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
-        </div>
-
-        <div class="service-card" id="tiendas">
-            <div class="service-icon">🛒</div>
-            <h3>Tiendas Online (E-Commerce)</h3>
-            <p>Plataformas de venta online sincronizadas con catálogo de productos, pasarelas de pago y envíos. Una herramienta comercial lista para vender las 24 horas.</p>
-            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Tiendas%20Online" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
-        </div>
-
-        <div class="service-card" id="seo">
-            <div class="service-icon">📈</div>
-            <h3>Posicionamiento Web & Posicionamiento en IA (GEO)</h3>
-            <p>Trabajamos en conjunto con las marcas para plasmar su identidad implementando las mejores prácticas y tendencias del mercado. Diseñamos sitios orientados a generar una experiencia de usuario satisfactoria permitiendo un proceso de navegación simple y efectivo.</p>
-            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20información%20sobre%20Posicionamiento%20SEO" class="btn-info" target="_blank" rel="noopener">+ INFO</a>
-        </div>
+    <!-- SUBPÁGINA 2: Tiendas Online -->
+    <section class="subpage-section" id="tiendas-online">
+        <h2>Subpágina: Tiendas Online (E-Commerce)</h2>
+        <p>Tu negocio abierto las 24 horas vendiendo en toda Argentina. Configuramos tu catálogo completo, medios de pago seguros (Mercado Pago, tarjetas, transferencias) y pasarelas de envíos logísticos.</p>
+        <ul class="features-list">
+            <li>Gestión ilimitada de productos y stock</li>
+            <li>Cobros integrados sin comisiones extras por venta</li>
+            <li>Panel de control intuitivo y fácil de usar</li>
+            <li>Diseño orientado a la conversión de ventas</li>
+        </ul>
+        <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20crear%20mi%20Tienda%20Online" class="btn-main" target="_blank" rel="noopener">Crear mi Tienda Online</a>
     </section>
 
-    <!-- Cobertura Internacional -->
-    <section class="reach-section" id="cobertura">
-        <h2>Alcance Nacional e Internacional</h2>
-        <p>Estés donde estés, llegamos a ti. Ofrecemos nuestros servicios en todo el país y el exterior:</p>
-        <div class="country-tags">
-            <span class="tag">🇦🇷 Argentina</span>
-            <span class="tag">🇺🇾 Uruguay</span>
-            <span class="tag">🇨🇱 Chile</span>
-            <span class="tag">🇵🇾 Paraguay</span>
-            <span class="tag">🇨🇴 Colombia</span>
-            <span class="tag">🇧🇷 Brasil</span>
-            <span class="tag">🇪🇨 Ecuador</span>
-        </div>
+    <!-- SUBPÁGINA 3: Posicionamiento SEO & IA -->
+    <section class="subpage-section" id="posicionamiento">
+        <h2>Subpágina: Posicionamiento SEO y GEO (IA)</h2>
+        <p>Aparecé en los primeros resultados de Google cuando tus clientes busquen tus servicios. Además, optimizamos tu sitio para que los nuevos motores de búsqueda basados en Inteligencia Artificial recomienden tu negocio.</p>
+        <ul class="features-list">
+            <li>Optimización técnica SEO On-Page</li>
+            <li>Estrategia de palabras clave locales (Mar del Plata y zona)</li>
+            <li>Autoridad de dominio y velocidad de respuesta</li>
+            <li>Preparación para búsquedas conversacionales en IA</li>
+        </ul>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20mejorar%20mi%20Posicionamiento%20SEO" class="btn-main" target="_blank" rel="noopener">Mejorar mi SEO</a>
     </section>
 
-    <!-- Sección Clientes -->
-    <section class="clients-section" id="clientes">
-        <h2 class="section-title">Nuestros Clientes</h2>
-        <p style="font-size: 1.05rem; font-weight: 700; color: var(--primary);">MÁS DE 1.500 CLIENTES CONFÍAN EN NOSOTROS</p>
-        
-        <div class="clients-grid">
-            <div class="client-box">HOTEL SHERATON</div>
-            <div class="client-box">COARSA S.A.</div>
-            <div class="client-box">TIMEX</div>
-            <div class="client-box">BAUZA FARMACIAS</div>
-        </div>
+    <!-- SUBPÁGINA 4: Quiénes Somos -->
+    <section class="subpage-section" id="quienes-somos">
+        <h2>Subpágina: Quiénes Somos</h2>
+        <p>Somos un estudio especializado en desarrollo técnico y diseño digital radicado en Mar del Plata. Ayudamos a profesionales, PyMEs y comercios a consolidar su presencia en internet con herramientas robustas, seguras y de alto impacto visual.</p>
+        <ul class="features-list">
+            <li>Más de 1.500 proyectos entregados exitosamente</li>
+            <li>Soporte técnico y asesoramiento permanente</li>
+            <li>Tecnología de última generación</li>
+        </ul>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20hablar%20con%20un%20asesor" class="btn-main" target="_blank" rel="noopener">Contactar con un Asesor</a>
     </section>
 
-    <!-- Botón Flotante WhatsApp -->
-    <a href="https://wa.me/5492236743622?text=Hola!%20Me%20interesa%20iniciar%20un%20proyecto%20web" class="whatsapp-float" target="_blank" rel="noopener">
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/5492236743622?text=Hola!%20Me%20interesa%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
         💬 WhatsApp
     </a>
 
     <footer>
-        <p>© 2026 Páginas Web Mar del Plata — Estudio de Diseño y Desarrollo Web</p>
+        <p>© 2026 Páginas Web Mar del Plata — Todos los derechos reservados</p>
     </footer>
 
 </body>
