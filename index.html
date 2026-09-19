@@ -185,7 +185,7 @@
         .process-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Zonas de Cobertura con Tarjetas Visuales Corregidas */
+        /* Zonas de Cobertura con Imágenes HTML Seguras */
         .regions-section {
             background-color: var(--white);
             border-radius: 20px;
@@ -203,10 +203,8 @@
         }
 
         .region-card {
-            height: 180px;
+            height: 190px;
             border-radius: 14px;
-            background-size: cover;
-            background-position: center;
             position: relative;
             overflow: hidden;
             text-decoration: none;
@@ -216,14 +214,22 @@
             transition: var(--transition);
         }
 
+        .region-card img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
         .region-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 100%);
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.25) 100%);
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             padding: 1.25rem 1.5rem;
+            z-index: 2;
             transition: var(--transition);
         }
 
@@ -247,11 +253,15 @@
 
         .region-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .region-card:hover img {
+            transform: scale(1.08);
         }
 
         .region-card:hover .region-overlay {
-            background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+            background: linear-gradient(to top, rgba(37, 99, 235, 0.85) 0%, rgba(15, 23, 42, 0.4) 100%);
         }
 
         .region-card:hover .region-arrow {
@@ -364,7 +374,7 @@
                     <span>→</span>
                 </a>
                 <a href="estudios.html" class="industry-link-card">
-                    ↳ Diseño web. para estudios contables y legales
+                    ↳ Diseño web para estudios contables y legales
                     <span>→</span>
                 </a>
                 <a href="logistica.html" class="industry-link-card">
@@ -404,7 +414,7 @@
             </div>
         </div>
 
-        <!-- Cobertura Regional con Fotos Corregidas y Específicas -->
+        <!-- Cobertura Regional con Imágenes Específicas Corregidas -->
         <div class="regions-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2>Cobertura en todo el país</h2>
@@ -412,56 +422,63 @@
             </div>
             
             <div class="regions-grid-visual">
-                <!-- CABA: Obelisco / Arquitectura urbana -->
-                <a href="caba.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1589909202874-1789d28d22d6?auto=format&fit=crop&w=600&q=80');">
+                <!-- CABA -->
+                <a href="caba.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1612257404917-1f9cff746904?auto=format&fit=crop&w=600&q=80" alt="CABA">
                     <div class="region-overlay">
                         <h3>CABA</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Córdoba: Paisaje serrano / arquitectura colonial -->
-                <a href="cordoba.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1627916532456-c0cddc6861f6?auto=format&fit=crop&w=600&q=80');">
+                <!-- Córdoba -->
+                <a href="cordoba.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1590457248875-a54823c1f329?auto=format&fit=crop&w=600&q=80" alt="Córdoba">
                     <div class="region-overlay">
                         <h3>Córdoba</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Rosario: Monumento a la Bandera / Paraná -->
-                <a href="rosario.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1664593457193-b07223a54b39?auto=format&fit=crop&w=600&q=80');">
+                <!-- Rosario -->
+                <a href="rosario.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1588528769145-d368e54737aa?auto=format&fit=crop&w=600&q=80" alt="Rosario">
                     <div class="region-overlay">
                         <h3>Rosario</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Mendoza: Viñedos y Cordillera real -->
-                <a href="mendoza.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80');">
+                <!-- Mendoza -->
+                <a href="mendoza.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=600&q=80" alt="Mendoza">
                     <div class="region-overlay">
                         <h3>Mendoza</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Ushuaia: Canal de Beagle / Fondeo patagónico -->
-                <a href="ushuaia.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=600&q=80');">
+                <!-- Ushuaia (Puerto de cruceros y Canal de Beagle) -->
+                <a href="ushuaia.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1548705008-048d08922cba?auto=format&fit=crop&w=600&q=80" alt="Ushuaia">
                     <div class="region-overlay">
                         <h3>Ushuaia</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Cataratas del Iguazú: Selva subtropical y saltos de agua (sin montañas) -->
-                <a href="iguazu.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80');">
+                <!-- Cataratas del Iguazú (Garganta del Diablo / Saltos) -->
+                <a href="iguazu.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Cataratas del Iguazú">
                     <div class="region-overlay">
                         <h3>Cataratas del Iguazú</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Posadas: Río Paraná y costanera fluvial (sin playa de mar) -->
-                <a href="posadas.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80');">
+                <!-- Posadas -->
+                <a href="posadas.html" class="region-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Posadas">
                     <div class="region-overlay">
                         <h3>Posadas</h3>
                         <span class="region-arrow">→</span>
