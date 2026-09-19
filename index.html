@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Diseño web profesional por industrias, tiendas online y posicionamiento SEO. Creamos sitios de alto rendimiento adaptados a tu negocio.">
-    <title>Diseño Web Profesional por Industrias | Páginas Web</title>
+    <meta name="description" content="Diseño web profesional, tiendas online y desarrollo por industrias en Mar del Plata y todo el país. Sitios rápidos, modernos y optimizados para convertir.">
+    <title>Diseño Web Profesional y Tiendas Online | Páginas Web</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,87 +53,150 @@
         .logo-text { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); line-height: 1.1; }
         .logo-text span { color: var(--primary); display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
 
-        .btn-header { background-color: var(--text-dark); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
+        .btn-header { background-color: var(--text-dark); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: var(--transition); }
         .btn-header:hover { background-color: var(--primary); }
 
+        /* Hero */
         .hero {
             background-color: var(--bg-dark);
             color: var(--white);
-            padding: 5rem 1.5rem 4rem;
+            padding: 5rem 1.5rem 6rem;
             text-align: center;
         }
         .hero-content { max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 1.2rem; line-height: 1.2; }
+        .badge-pill { display: inline-flex; align-items: center; gap: 6px; background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 1.2rem; line-height: 1.15; }
         .hero h1 span { color: var(--primary); }
         .hero p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 2rem; }
 
-        /* Contenedor Mockup Visual parecido a Brekor */
-        .mockup-container {
+        .btn-primary { background-color: var(--primary); color: var(--white); padding: 0.9rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; transition: var(--transition); }
+        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+
+        /* Contenedor de Imagen Mockup / Presentación Visual */
+        .showcase-container {
             max-width: 900px;
-            margin: -3rem auto 3rem;
+            margin: -4rem auto 3rem;
             padding: 0 1rem;
             position: relative;
             z-index: 10;
         }
-        .mockup-card {
+
+        .mockup-frame {
             background: #1e293b;
             border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: white;
+            padding: 1rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.15);
         }
-        .mockup-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .mockup-card p { font-size: 0.9rem; color: #94a3b8; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .mockup-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
 
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 2.5rem; }
-        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
-        .section-header p { color: var(--text-muted); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
 
-        /* Estilo de botones de industrias en cascada (como en tu captura) */
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Grilla de Servicios Principales */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .card-icon { font-size: 2rem; margin-bottom: 1.25rem; }
+        .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        
+        .checks-list { list-style: none; margin-bottom: 1.5rem; }
+        .checks-list li { color: var(--text-dark); font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .checks-list li::before { content: "✓"; color: var(--primary); font-weight: 900; }
+
+        /* Lista de Industrias (Subpáginas) estilo Brekor */
+        .industries-box {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
         .industries-list {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            max-width: 750px;
-            margin: 0 auto 4rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .industry-link-card {
-            background: var(--white);
+            background: var(--bg-light);
             border: 1px solid var(--border-color);
             padding: 1.2rem 1.5rem;
             border-radius: 12px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
             transition: var(--transition);
         }
 
-        .industry-link-card span {
-            color: var(--primary);
-            font-size: 1.2rem;
-            font-weight: 900;
+        .industry-link-card span { color: var(--primary); font-size: 1.2rem; font-weight: 900; }
+        .industry-link-card:hover { background-color: var(--primary); color: var(--white); border-color: var(--primary); transform: translateX(6px); }
+        .industry-link-card:hover span { color: var(--white); }
+
+        /* Proceso de Trabajo */
+        .process-section {
+            background-color: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3.5rem 2rem;
+            margin-bottom: 4rem;
         }
 
-        .industry-link-card:hover {
-            background-color: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-            transform: translateX(6px);
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
         }
 
-        .industry-link-card:hover span {
-            color: var(--white);
+        .step-number { font-size: 2.5rem; font-weight: 800; color: #cbd5e1; line-height: 1; margin-bottom: 0.5rem; }
+        .process-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Zonas de Cobertura */
+        .regions-section {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
         }
+
+        .regions-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 1.5rem; }
+        .region-tag { background-color: var(--white); color: var(--text-dark); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; border: 1px solid #cbd5e1; transition: var(--transition); }
+        .region-tag:hover { background-color: var(--primary); color: var(--white); border-color: var(--primary); transform: translateY(-2px); }
 
         .whatsapp-float {
             position: fixed; bottom: 20px; right: 20px;
@@ -157,61 +220,144 @@
                 <span>Soluciones Digitales</span>
             </div>
         </a>
-        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener">Solicitar Presupuesto</a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener">Pedir Presupuesto</a>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Servicios de diseño web para <span>cada tipo de industria</span></h1>
-            <p>Desarrollamos experiencias digitales avanzadas, optimizadas para posicionar tu marca y generar conversiones reales.</p>
+            <div class="badge-pill">✨ Desarrollo Web Profesional & E-commerce</div>
+            <h1>Creamos páginas web que impulsan tu <span>negocio al siguiente nivel</span></h1>
+            <p>Diseñamos sitios rápidos, modernos, 100% autoadministrables y optimizados para convertir visitantes en clientes reales.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20empezar%20mi%20proyecto%20web" class="btn-primary" target="_blank" rel="noopener">Iniciar mi Proyecto</a>
         </div>
     </section>
 
-    <!-- Mockup Visual Estilo Brekor -->
-    <div class="mockup-container">
-        <div class="mockup-card">
-            <h3>💻 Proyectos de Alto Rendimiento</h3>
-            <p>Diseños responsivos adaptados exactamente a lo que tu sector comercial necesita para destacar frente a la competencia.</p>
+    <!-- Imagen Mockup Visual (Estilo Brekor con dispositivos) -->
+    <div class="showcase-container">
+        <div class="mockup-frame">
+            <!-- Reemplazá el enlace de la imagen por una foto real de tus trabajos o un mockup -->
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Diseño web profesional multipantalla">
         </div>
     </div>
 
     <main class="container">
+        
+        <!-- Servicios Principales -->
         <div class="section-header">
-            <h2>Explorá por tu sector</h2>
-            <p>Hacé clic en cualquier industria para conocer la estrategia específica, casos de éxito y subpáginas detalladas:</p>
+            <h2>Soluciones digitales principales</h2>
+            <p>Herramientas potentes y escalables pensadas para cada tipo de proyecto corporativo o de ventas.</p>
         </div>
 
-        <!-- Lista de enlaces a subpáginas de servicios (similar a tu segunda captura) -->
-        <div class="industries-list">
-            <a href="bodegas.html" class="industry-link-card">
-                ↳ Diseño web para bodegas y enoturismo
-                <span>→</span>
-            </a>
-            <a href="clinicas.html" class="industry-link-card">
-                ↳ Diseño web para clínicas y salud
-                <span>→</span>
-            </a>
-            <a href="hoteles.html" class="industry-link-card">
-                ↳ Diseño web para hoteles y turismo
-                <span>→</span>
-            </a>
-            <a href="estetica.html" class="industry-link-card">
-                ↳ Diseño web para centros de estética
-                <span>→</span>
-            </a>
-            <a href="gastronomia.html" class="industry-link-card">
-                ↳ Diseño web para restaurantes y gastronomía
-                <span>→</span>
-            </a>
-            <a href="estudios.html" class="industry-link-card">
-                ↳ Diseño web para estudios contables y legales
-                <span>→</span>
-            </a>
-            <a href="logistica.html" class="industry-link-card">
-                ↳ Diseño web para empresas de logística
-                <span>→</span>
-            </a>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Páginas Web Corporativas</h3>
+                <p>Ideal para profesionales y PyMEs que necesitan una presencia online seria, moderna y de alto impacto.</p>
+                <ul class="checks-list">
+                    <li>Diseño 100% adaptable a celulares</li>
+                    <li>Optimización SEO técnico básico</li>
+                    <li>Botones de contacto y WhatsApp directos</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20página%20web%20corporativa" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener">Consultar ahora</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛍️</div>
+                <h3>Tiendas Online (E-commerce)</h3>
+                <p>Vendé tus productos las 24 horas con carritos de compra seguros, gestión de stock y pagos integrados.</p>
+                <ul class="checks-list">
+                    <li>Pasarelas de pago y envíos integrados</li>
+                    <li>Panel autoadministrable fácil de usar</li>
+                    <li>Diseño enfocado en conversión de ventas</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20tienda%20online" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener">Consultar ahora</a>
+            </div>
         </div>
+
+        <!-- Sección de Subpáginas por Industria (Estilo Brekor) -->
+        <div class="industries-box">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Servicios de diseño web por industria</h2>
+                <p>Explorá las soluciones específicas que diseñamos para cada sector comercial:</p>
+            </div>
+            <div class="industries-list">
+                <a href="bodegas.html" class="industry-link-card">
+                    ↳ Diseño web para bodegas y enoturismo
+                    <span>→</span>
+                </a>
+                <a href="clinicas.html" class="industry-link-card">
+                    ↳ Diseño web para clínicas y salud
+                    <span>→</span>
+                </a>
+                <a href="hoteles.html" class="industry-link-card">
+                    ↳ Diseño web para hoteles y turismo
+                    <span>→</span>
+                </a>
+                <a href="estetica.html" class="industry-link-card">
+                    ↳ Diseño web para centros de estética
+                    <span>→</span>
+                </a>
+                <a href="gastronomia.html" class="industry-link-card">
+                    ↳ Diseño web para restaurantes y gastronomía
+                    <span>→</span>
+                </a>
+                <a href="estudios.html" class="industry-link-card">
+                    ↳ Diseño web para estudios contables y legales
+                    <span>→</span>
+                </a>
+                <a href="logistica.html" class="industry-link-card">
+                    ↳ Diseño web para empresas de logística
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Proceso de Trabajo -->
+        <div class="process-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Cómo trabajamos</h2>
+                <p>Un proceso transparente, ordenado y sin complicaciones para entregar tu web a tiempo.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h4>Estrategia & Brief</h4>
+                    <p>Analizamos tu negocio, tus objetivos y definimos la estructura ideal.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h4>Diseño & Desarrollo</h4>
+                    <p>Creamos un diseño moderno, responsive y optimizado para alto rendimiento.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h4>Revisión & Ajustes</h4>
+                    <p>Probamos el sitio en conjunto y realizamos los retoques necesarios.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h4>Lanzamiento</h4>
+                    <p>Tu web queda online, indexada en Google y lista para vender.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cobertura Regional -->
+        <div class="regions-section">
+            <h2 style="font-size: 1.5rem; font-weight: 800;">Cobertura en todo el país</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Conocé nuestras propuestas específicas para cada región:</p>
+            <div class="regions-grid">
+                <a href="caba.html" class="region-tag">CABA</a>
+                <a href="cordoba.html" class="region-tag">Córdoba</a>
+                <a href="rosario.html" class="region-tag">Rosario</a>
+                <a href="mendoza.html" class="region-tag">Mendoza</a>
+                <a href="ushuaia.html" class="region-tag">Ushuaia</a>
+                <a href="iguazu.html" class="region-tag">Cataratas del Iguazú</a>
+                <a href="posadas.html" class="region-tag">Posadas</a>
+            </div>
+        </div>
+
     </main>
 
     <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
