@@ -185,18 +185,80 @@
         .process-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Zonas de Cobertura */
+        /* Zonas de Cobertura con Tarjetas Visuales y Fotos Turísticas */
         .regions-section {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            background-color: var(--white);
             border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
+            border: 1px solid var(--border-color);
+            padding: 3.5rem 2rem;
             margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
-        .regions-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 1.5rem; }
-        .region-tag { background-color: var(--white); color: var(--text-dark); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; border: 1px solid #cbd5e1; transition: var(--transition); }
-        .region-tag:hover { background-color: var(--primary); color: var(--white); border-color: var(--primary); transform: translateY(-2px); }
+        .regions-grid-visual {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .region-card {
+            height: 180px;
+            border-radius: 14px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-end;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .region-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 1.25rem 1.5rem;
+            transition: var(--transition);
+        }
+
+        .region-card h3 {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .region-arrow {
+            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            transition: var(--transition);
+        }
+
+        .region-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .region-card:hover .region-overlay {
+            background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+
+        .region-card:hover .region-arrow {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
 
         .whatsapp-float {
             position: fixed; bottom: 20px; right: 20px;
@@ -236,7 +298,6 @@
     <!-- Imagen Mockup Visual (Estilo Brekor con dispositivos) -->
     <div class="showcase-container">
         <div class="mockup-frame">
-            <!-- Reemplazá el enlace de la imagen por una foto real de tus trabajos o un mockup -->
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Diseño web profesional multipantalla">
         </div>
     </div>
@@ -343,18 +404,62 @@
             </div>
         </div>
 
-        <!-- Cobertura Regional -->
+        <!-- Cobertura Regional con Tarjetas Visuales y Fotos -->
         <div class="regions-section">
-            <h2 style="font-size: 1.5rem; font-weight: 800;">Cobertura en todo el país</h2>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Conocé nuestras propuestas específicas para cada región:</p>
-            <div class="regions-grid">
-                <a href="caba.html" class="region-tag">CABA</a>
-                <a href="cordoba.html" class="region-tag">Córdoba</a>
-                <a href="rosario.html" class="region-tag">Rosario</a>
-                <a href="mendoza.html" class="region-tag">Mendoza</a>
-                <a href="ushuaia.html" class="region-tag">Ushuaia</a>
-                <a href="iguazu.html" class="region-tag">Cataratas del Iguazú</a>
-                <a href="posadas.html" class="region-tag">Posadas</a>
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Cobertura en todo el país</h2>
+                <p>Conocé nuestras propuestas específicas adaptadas a cada región:</p>
+            </div>
+            
+            <div class="regions-grid-visual">
+                <a href="caba.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1612257404917-1f9cff746904?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>CABA</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="cordoba.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1590457248875-a54823c1f329?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Córdoba</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="rosario.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1588528769145-d368e54737aa?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Rosario</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="mendoza.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Mendoza</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="ushuaia.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Ushuaia</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="iguazu.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Cataratas del Iguazú</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="posadas.html" class="region-card" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80');">
+                    <div class="region-overlay">
+                        <h3>Posadas</h3>
+                        <span class="region-arrow">→</span>
+                    </div>
+                </a>
             </div>
         </div>
 
