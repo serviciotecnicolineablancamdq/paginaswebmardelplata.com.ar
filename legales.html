@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diseño web para estudios contables, jurídicos y de abogados. Generación de confianza, áreas de práctica y asesoramiento online.">
+    <title>Diseño Web para Estudios Contables y Legales | Agencia Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-dark: #0f172a;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --whatsapp: #25d366;
+            --accent: #1e3a8a; /* Tono corporativo / azul marino oscuro formal */
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding-bottom: 80px;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+        .logo-text { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); }
+        .btn-header { background-color: var(--text-dark); color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .breadcrumb { padding: 1rem 1.5rem; background: var(--bg-light); font-size: 0.9rem; color: var(--text-muted); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 1.5rem 5rem;
+            text-align: center;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1.2rem; }
+        .hero p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 2rem; }
+        .btn-primary { background-color: white; color: var(--accent); padding: 0.9rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1.25rem; }
+        .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+        .checks-list { list-style: none; margin-top: 1.5rem; }
+        .checks-list li { color: var(--text-dark); font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 10px; }
+        .checks-list li::before { content: "✓"; color: var(--primary); font-weight: 900; }
+        .cases-box {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+        }
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .case-item {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+        }
+        .case-item h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent); }
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .btn-cta { background-color: white; color: var(--accent); padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; }
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: var(--whatsapp); color: white;
+            padding: 12px 20px; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            z-index: 1000; display: flex; align-items: center; gap: 8px;
+        }
+        footer { background-color: var(--bg-dark); color: #94a3b8; text-align: center; padding: 2.5rem 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand-logo">
+            <div class="logo-icon">W</div>
+            <div class="logo-text">Agencia Web</div>
+        </a>
+        <a href="https://wa.me/5492236743622" class="btn-header" target="_blank">Pedir Presupuesto</a>
+    </header>
+    <div class="breadcrumb">
+        <a href="index.html">← Volver al inicio</a>
+    </div>
+    <section class="hero">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1>Diseño Web para Estudios Contables y Legales</h1>
+            <p>Proyecta solidez, autoridad y confianza. Páginas profesionales para abogados, contadores y asesores corporativos.</p>
+            <a href="https://wa.me/5492236743622" class="btn-primary" target="_blank">Consultar mi Proyecto</a>
+        </div>
+    </section>
+    <main class="container">
+        <div class="section-header">
+            <h2>¿Qué incluye tu sitio corporativo?</h2>
+            <p>Herramientas de conversión y presentación formal para profesionales de la ley y los números.</p>
+        </div>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon">⚖️</div>
+                <h3>Áreas de Práctica Detalladas</h3>
+                <p>Presenta con claridad tus especialidades (laboral, civil, penal, comercial o impositiva).</p>
+                <ul class="checks-list">
+                    <li>Estructura clara por especialidad</li>
+                    <li>Explicación accesible para clientes</li>
+                    <li>Llamados a la consulta directa</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <h3>Perfil de Socios y Equipo</h3>
+                <p>Destaca la trayectoria académica y profesional de los miembros del estudio.</p>
+                <ul class="checks-list">
+                    <li>Biografías profesionales</li>
+                    <li>Especializaciones y posgrados</li>
+                    <li>Credibilidad institucional</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">📅</div>
+                <h3>Agenda de Consultas / Citas</h3>
+                <p>Sistema estructurado para coordinar reuniones presenciales o videoconferencias de asesoría.</p>
+                <ul class="checks-list">
+                    <li>Filtro por tipo de consulta</li>
+                    <li>Sincronización de horarios</li>
+                    <li>Formulario de pre-evaluación</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h3>Área de Clientes Segura</h3>
+                <p>Espacio privado e integrado para compartir documentación fiscal, balances o expedientes.</p>
+                <ul class="checks-list">
+                    <li>Acceso protegido por contraseña</li>
+                    <li>Transferencia de archivos seguros</li>
+                    <li>Optimización de procesos</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">📰</div>
+                <h3>Blog de Actualidad Legal/Fiscal</h3>
+                <p>Publica artículos sobre reformas de leyes, vencimientos impositivos o novedades normativas.</p>
+                <ul class="checks-list">
+                    <li>Posicionamiento SEO en Google</li>
+                    <li>Artículos de interés corporativo</li>
+                    <li>Posicionamiento como referente</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Diseño Institucional y Seguro</h3>
+                <p>Sitio web protegido bajo normativas de privacidad y protocolos cifrados SSL avanzados.</p>
+                <ul class="checks-list">
+                    <li>Máxima seguridad de datos</li>
+                    <li>Diseño sobrio y elegante</li>
+                    <li>Optimización multidispositivo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cases-box">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Lo que logramos para estudios profesionales</h2>
+            </div>
+            <div class="cases-grid">
+                <div class="case-item">
+                    <h4>💼 Mayor Autoridad</h4>
+                    <p>Una estética seria que transmite solidez y trayectoria ante clientes corporativos.</p>
+                </div>
+                <div class="case-item">
+                    <h4>🔍 Clientes Calificados</h4>
+                    <p>Filtra consultas informales y atrae casos de alto valor para tu estudio.</p>
+                </div>
+                <div class="case-item">
+                    <h4>⏱️ Eficiencia Operativa</h4>
+                    <p>Centraliza la documentación y las citas previas de manera ordenada.</p>
+                </div>
+                <div class="case-item">
+                    <h4>📈 Visibilidad Digital</h4>
+                    <p>Aparece en los primeros resultados cuando busquen asesoramiento especializado.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-section">
+            <h2>¿Listo para elevar la imagen de tu estudio?</h2>
+            <p>Atrae a más clientes corporativos y particulares con una plataforma web de nivel superior.</p>
+            <a href="https://wa.me/5492236743622" class="btn-cta" target="_blank">Agenda una Consulta Gratis</a>
+        </div>
+    </main>
+    <a href="https://wa.me/5492236743622" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
+    <footer>
+        <p>© 2026 Agencia Web — Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
