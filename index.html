@@ -185,7 +185,7 @@
         .process-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Zonas de Cobertura con Imágenes HTML Seguras */
+        /* Zonas de Cobertura - MEJORADO PARA MEJOR VISIBILIDAD */
         .regions-section {
             background-color: var(--white);
             border-radius: 20px;
@@ -221,10 +221,11 @@
             transition: transform 0.5s ease;
         }
 
+        /* OVERLAY MEJORADO: Gradiente más oscuro y opacity mayor para mejor visibilidad */
         .region-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.25) 100%);
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.5) 60%);
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -237,11 +238,12 @@
             color: var(--white);
             font-size: 1.15rem;
             font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .region-arrow {
             color: var(--white);
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.25);
             width: 32px; height: 32px;
             border-radius: 50%;
             display: flex;
@@ -249,6 +251,7 @@
             justify-content: center;
             font-weight: 800;
             transition: var(--transition);
+            flex-shrink: 0;
         }
 
         .region-card:hover {
@@ -261,7 +264,7 @@
         }
 
         .region-card:hover .region-overlay {
-            background: linear-gradient(to top, rgba(37, 99, 235, 0.85) 0%, rgba(15, 23, 42, 0.4) 100%);
+            background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.5) 60%);
         }
 
         .region-card:hover .region-arrow {
@@ -308,7 +311,7 @@
     <!-- Imagen Mockup Visual -->
     <div class="showcase-container">
         <div class="mockup-frame">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Diseño web profesional multipantalla">
+            <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diseño web profesional multipantalla">
         </div>
     </div>
 
@@ -414,7 +417,7 @@
             </div>
         </div>
 
-        <!-- Cobertura Regional con Imágenes Específicas Corregidas -->
+        <!-- Cobertura Regional - IMÁGENES MEJORADAS DE PEXELS -->
         <div class="regions-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2>Cobertura en todo el país</h2>
@@ -422,80 +425,8 @@
             </div>
             
             <div class="regions-grid-visual">
-                <!-- CABA -->
+                <!-- CABA - Buenos Aires (Ciudad) -->
                 <a href="caba.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1612257404917-1f9cff746904?auto=format&fit=crop&w=600&q=80" alt="CABA">
+                    <img src="https://images.pexels.com/photos/2254065/pexels-photo-2254065.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="CABA - Buenos Aires">
                     <div class="region-overlay">
                         <h3>CABA</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Córdoba -->
-                <a href="cordoba.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1590457248875-a54823c1f329?auto=format&fit=crop&w=600&q=80" alt="Córdoba">
-                    <div class="region-overlay">
-                        <h3>Córdoba</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Rosario -->
-                <a href="rosario.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1588528769145-d368e54737aa?auto=format&fit=crop&w=600&q=80" alt="Rosario">
-                    <div class="region-overlay">
-                        <h3>Rosario</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Mendoza -->
-                <a href="mendoza.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=600&q=80" alt="Mendoza">
-                    <div class="region-overlay">
-                        <h3>Mendoza</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Ushuaia (Puerto de cruceros y Canal de Beagle) -->
-                <a href="ushuaia.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1548705008-048d08922cba?auto=format&fit=crop&w=600&q=80" alt="Ushuaia">
-                    <div class="region-overlay">
-                        <h3>Ushuaia</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Cataratas del Iguazú (Garganta del Diablo / Saltos) -->
-                <a href="iguazu.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Cataratas del Iguazú">
-                    <div class="region-overlay">
-                        <h3>Cataratas del Iguazú</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-
-                <!-- Posadas -->
-                <a href="posadas.html" class="region-card">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Posadas">
-                    <div class="region-overlay">
-                        <h3>Posadas</h3>
-                        <span class="region-arrow">→</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-    </main>
-
-    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
-        💬 WhatsApp
-    </a>
-
-    <footer>
-        <p>© 2026 Agencia Web — Todos los derechos reservados</p>
-    </footer>
-
-</body>
-</html>
