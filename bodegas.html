@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Diseño web profesional para bodegas, viñedos y enoturismo. Sitios especializados para promocionar vinos y experiencias enológicas.">
+    <title>Diseño Web para Bodegas y Enoturismo | Agencia Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg-dark: #0f172a;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --whatsapp: #25d366;
+            --transition: all 0.3s ease;
+            --accent: #8b4513;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            font-size: 16px;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; }
+        .logo-text { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); line-height: 1.1; }
+        .logo-text span { color: var(--primary); display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+
+        .breadcrumb { 
+            padding: 1rem 1.5rem;
+            background: var(--bg-light);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .btn-header { background-color: var(--text-dark); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: var(--transition); }
+        .btn-header:hover { background-color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #8b4513 0%, #d4a574 100%);
+            color: var(--white);
+            padding: 4rem 1.5rem 5rem;
+            text-align: center;
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .badge-pill { display: inline-flex; align-items: center; gap: 6px; background-color: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.85rem; color: #f5f5f5; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1.2rem; line-height: 1.15; }
+        .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.95); margin-bottom: 2rem; }
+
+        .btn-primary { background-color: var(--white); color: var(--accent); padding: 0.9rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; transition: var(--transition); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Grilla de Features */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1.25rem; }
+        .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-dark); }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .checks-list { list-style: none; margin-top: 1.5rem; }
+        .checks-list li { color: var(--text-dark); font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .checks-list li::before { content: "✓"; color: var(--primary); font-weight: 900; }
+
+        /* Sección de Casos */
+        .cases-box {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .case-item {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .case-item h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent); }
+        .case-item p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #8b4513 0%, #d4a574 100%);
+            color: var(--white);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95; }
+
+        .btn-cta { background-color: var(--white); color: var(--accent); padding: 1rem 2rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; transition: var(--transition); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: var(--whatsapp); color: white;
+            padding: 12px 20px; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000; display: flex; align-items: center; gap: 8px;
+        }
+
+        footer { background-color: var(--bg-dark); color: #94a3b8; text-align: center; padding: 2.5rem 1rem; font-size: 0.875rem; }
+
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); text-decoration: none; font-weight: 600; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="brand-logo">
+            <div class="logo-icon">W</div>
+            <div class="logo-text">
+                Agencia Web
+                <span>Soluciones Digitales</span>
+            </div>
+        </a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener">Pedir Presupuesto</a>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">← Volver al inicio</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-pill">🍇 Soluciones Digitales Especializadas</div>
+            <h1>Diseño Web para Bodegas y Enoturismo</h1>
+            <p>Plataformas profesionales que promocionan tus vinos, experiencias y atraen turismo enológico de calidad.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20un%20sitio%20web%20para%20mi%20bodega" class="btn-primary" target="_blank" rel="noopener">Consultar mi Proyecto</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Características Principales -->
+        <div class="section-header">
+            <h2>¿Qué incluye tu web para bodega?</h2>
+            <p>Herramientas diseñadas específicamente para el sector enoturístico y vitivinícola.</p>
+        </div>
+
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon">🍷</div>
+                <h3>Catálogo de Vinos Interactivo</h3>
+                <p>Exhibe tu colección de vinos con fichas técnicas, puntuaciones, maridajes y opciones de compra.</p>
+                <ul class="checks-list">
+                    <li>Ficha técnica completa por vino</li>
+                    <li>Fotos en alta resolución</li>
+                    <li>Sistema de reseñas y puntuaciones</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📅</div>
+                <h3>Reservas de Visitas y Degustaciones</h3>
+                <p>Calendario online integrado para que los visitantes reserven sus tours y catas sin intermediarios.</p>
+                <ul class="checks-list">
+                    <li>Calendario interactivo</li>
+                    <li>Confirmación automática</li>
+                    <li>Recordatorios por email</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛒</div>
+                <h3>Tienda Online Integrada</h3>
+                <p>Vende tus vinos y productos directamente. Envíos seguros a todo el país con pagos seguros.</p>
+                <ul class="checks-list">
+                    <li>Carrito de compras</li>
+                    <li>Múltiples métodos de pago</li>
+                    <li>Cálculo automático de envíos</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📸</div>
+                <h3>Galería y Blog Enológico</h3>
+                <p>Comparte historias de tu bodega, procesos, eventos y educación enológica con tu comunidad.</p>
+                <ul class="checks-list">
+                    <li>Galerías de fotos profesionales</li>
+                    <li>Blog con SEO optimizado</li>
+                    <li>Integración en redes sociales</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3>Ubicación e Información Práctica</h3>
+                <p>Mapa interactivo, horarios, contacto directo y toda la información que necesitan tus visitantes.</p>
+                <ul class="checks-list">
+                    <li>Mapa de Google integrado</li>
+                    <li>Direcciones y transporte</li>
+                    <li>Contacto directo por WhatsApp</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Analítica y Reportes</h3>
+                <p>Panel de control para ver qué funciona: visitantes, reservas, ventas y comportamiento de usuarios.</p>
+                <ul class="checks-list">
+                    <li>Dashboard en tiempo real</li>
+                    <li>Reportes descargables</li>
+                    <li>Seguimiento de conversiones</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Casos de Éxito -->
+        <div class="cases-box">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Lo que logramos para bodegas como la tuya</h2>
+                <p>Resultados reales de sitios que hemos desarrollado en el sector vitivinícola:</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-item">
+                    <h4>📈 Aumento de Visitas</h4>
+                    <p>+300% en consultas online en los primeros 6 meses gracias a SEO optimizado.</p>
+                </div>
+                <div class="case-item">
+                    <h4>🎯 Más Reservas de Tours</h4>
+                    <p>Sistema de reservas online que redujo gestión manual en 80%.</p>
+                </div>
+                <div class="case-item">
+                    <h4>💰 Ventas Directas</h4>
+                    <p>Comercio electrónico que generó ventas a otros países sin viajar.</p>
+                </div>
+                <div class="case-item">
+                    <h4>🌐 Presencia Profesional</h4>
+                    <p>Web moderna que proyecta profesionalismo y confianza a nivel internacional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="cta-section">
+            <h2>¿Lista tu bodega para conquistar el mundo digital?</h2>
+            <p>Te ayudamos a vender más vinos, atraer más turismo y posicionar tu marca en internet.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20saber%20más%20sobre%20un%20sitio%20web%20para%20mi%20bodega" class="btn-cta" target="_blank" rel="noopener">Agenda una Consulta Gratis</a>
+        </div>
+
+    </main>
+
+    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20bodegas%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
+        💬 WhatsApp
+    </a>
+
+    <footer>
+        <p>© 2026 Agencia Web — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
