@@ -6,7 +6,7 @@
     <meta name="description" content="Diseño web profesional, tiendas online y desarrollo por industrias en Mar del Plata y todo el país. Sitios rápidos, modernos y optimizados para convertir.">
     <title>Diseño Web Profesional y Tiendas Online | Páginas Web</title>
 
-    <!-- Optimización de carga de fuentes para evitar bloqueo de renderizado -->
+    <!-- Optimización de carga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -189,7 +189,7 @@
         .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Zonas de Cobertura */
+        /* Zonas de Cobertura con Degradados CSS (Sin imágenes pesadas) */
         .regions-section {
             background-color: var(--white);
             border-radius: 20px;
@@ -207,41 +207,34 @@
         }
 
         .region-card {
-            height: 190px;
+            height: 160px;
             border-radius: 14px;
             position: relative;
             overflow: hidden;
             text-decoration: none;
             display: flex;
             align-items: flex-end;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: var(--transition);
-        }
-
-        .region-card img {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .region-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.5) 60%);
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
             padding: 1.25rem 1.5rem;
-            z-index: 2;
-            transition: var(--transition);
+            justify-content: space-between;
         }
+
+        /* Degradados únicos por región optimizados por CSS */
+        .region-caba { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+        .region-cordoba { background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%); }
+        .region-rosario { background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); }
+        .region-mendoza { background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 100%); }
+        .region-ushuaia { background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%); }
+        .region-iguazu { background: linear-gradient(135deg, #0575e6 0%, #00f2fe 100%); }
+        .region-posadas { background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%); }
 
         .region-card h3 {
             color: var(--white);
             font-size: 1.15rem;
             font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            z-index: 2;
         }
 
         .region-arrow {
@@ -255,16 +248,20 @@
             font-weight: 800;
             transition: var(--transition);
             flex-shrink: 0;
+            z-index: 2;
         }
 
         .region-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            filter: brightness(1.05);
         }
 
-        .region-card:hover img { transform: scale(1.08); }
-        .region-card:hover .region-overlay { background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.5) 60%); }
-        .region-card:hover .region-arrow { background-color: var(--white); color: var(--primary); transform: translateX(4px); }
+        .region-card:hover .region-arrow {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
 
         .whatsapp-float {
             position: fixed; bottom: 20px; right: 20px;
@@ -301,7 +298,7 @@
         </div>
     </section>
 
-    <!-- Imagen Mockup Visual optimizada para LCP -->
+    <!-- Imagen Principal del Mockup optimizada para LCP -->
     <div class="showcase-container">
         <div class="mockup-frame">
             <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diseño web profesional multipantalla" width="1200" height="800" fetchpriority="high">
@@ -418,67 +415,46 @@
             </div>
             
             <div class="regions-grid-visual">
-                <a href="caba.html" class="region-card" aria-label="Diseño web en CABA">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%232c3e50' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECABA%3C/text%3E%3C/svg%3E" alt="CABA" width="600" height="600" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <div class="region-overlay">
-                        <h3>CABA</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="caba.html" class="region-card region-caba" aria-label="Diseño web en CABA">
+                    <h3>CABA</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="cordoba.html" class="region-card" aria-label="Diseño web en Córdoba">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23e74c3c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECórdoba%3C/text%3E%3C/svg%3E" alt="Córdoba" width="600" height="600" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    <div class="region-overlay">
-                        <h3>Córdoba</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="cordoba.html" class="region-card region-cordoba" aria-label="Diseño web en Córdoba">
+                    <h3>Córdoba</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="rosario.html" class="region-card" aria-label="Diseño web en Rosario">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%233498db' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ERosario%3C/text%3E%3C/svg%3E" alt="Rosario" width="600" height="600" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    <div class="region-overlay">
-                        <h3>Rosario</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="rosario.html" class="region-card region-rosario" aria-label="Diseño web en Rosario">
+                    <h3>Rosario</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="mendoza.html" class="region-card" aria-label="Diseño web en Mendoza">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%239b59b6' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EMendoza%3C/text%3E%3C/svg%3E" alt="Mendoza" width="600" height="600" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                    <div class="region-overlay">
-                        <h3>Mendoza</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="mendoza.html" class="region-card region-mendoza" aria-label="Diseño web en Mendoza">
+                    <h3>Mendoza</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="ushuaia.html" class="region-card" aria-label="Diseño web en Ushuaia">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%231abc9c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EUshuaia%3C/text%3E%3C/svg%3E" alt="Ushuaia" width="600" height="600" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-                    <div class="region-overlay">
-                        <h3>Ushuaia</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="ushuaia.html" class="region-card region-ushuaia" aria-label="Diseño web en Ushuaia">
+                    <h3>Ushuaia</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="iguazu.html" class="region-card" aria-label="Diseño web en Cataratas del Iguazú">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%2327ae60' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='%23ecf0f1'%3ECataratas del Iguazú%3C/text%3E%3C/svg%3E" alt="Cataratas del Iguazú" width="600" height="600" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);">
-                    <div class="region-overlay">
-                        <h3>Cataratas del Iguazú</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="iguazu.html" class="region-card region-iguazu" aria-label="Diseño web en Cataratas del Iguazú">
+                    <h3>Cataratas del Iguazú</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
 
-                <a href="posadas.html" class="region-card" aria-label="Diseño web en Posadas">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23f39c12' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EPosadas%3C/text%3E%3C/svg%3E" alt="Posadas" width="600" height="600" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                    <div class="region-overlay">
-                        <h3>Posadas</h3>
-                        <span class="region-arrow" aria-hidden="true">→</span>
-                    </div>
+                <a href="posadas.html" class="region-card region-posadas" aria-label="Diseño web en Posadas">
+                    <h3>Posadas</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
                 </a>
             </div>
         </div>
 
     </main>
 
-    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <a href="https://wa.me/5492236743622?text=Hola,%2520vengo%2520de%2520la%2520web%2520y%2520quiero%2520asesoramiento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
         💬 WhatsApp
     </a>
 
