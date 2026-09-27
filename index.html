@@ -1,5 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Diseño web profesional, tiendas online y desarrollo por industrias en Mar del Plata y todo el país. Sitios rápidos, modernos y optimizados para convertir.">
+    <title>Diseño Web Profesional y Tiendas Online | Páginas Web</title>
+
+    <!-- Optimización de carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
+
     <style>
-        /* Estilos actualizados para las tarjetas de regiones con imágenes reales */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg-dark: #0f172a;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --whatsapp: #1ebe5d;
+            --transition: all 0.3s ease;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            font-size: 16px;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background-color: var(--primary); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; }
+        .logo-text { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); line-height: 1.1; }
+        .logo-text span { color: var(--primary); display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+
+        .btn-header { background-color: var(--text-dark); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: var(--transition); }
+        .btn-header:hover { background-color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            background-color: var(--bg-dark);
+            color: var(--white);
+            padding: 5rem 1.5rem 6rem;
+            text-align: center;
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .badge-pill { display: inline-flex; align-items: center; gap: 6px; background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 1.2rem; line-height: 1.15; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 2rem; }
+
+        .btn-primary { background-color: var(--primary); color: var(--white); padding: 0.9rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; transition: var(--transition); }
+        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+
+        /* Contenedor de Imagen Mockup */
+        .showcase-container {
+            max-width: 900px;
+            margin: -4rem auto 3rem;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .mockup-frame {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .mockup-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Grilla de Servicios Principales */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .card-icon { font-size: 2rem; margin-bottom: 1.25rem; }
+        .card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        
+        .checks-list { list-style: none; margin-bottom: 1.5rem; }
+        .checks-list li { color: var(--text-dark); font-size: 0.9rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .checks-list li::before { content: "✓"; color: var(--primary); font-weight: 900; }
+
+        /* Lista de Industrias */
+        .industries-box {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        .industries-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .industry-link-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .industry-link-card span { color: var(--primary); font-size: 1.2rem; font-weight: 900; }
+        .industry-link-card:hover { background-color: var(--primary); color: var(--white); border-color: var(--primary); transform: translateX(6px); }
+        .industry-link-card:hover span { color: var(--white); }
+
+        /* Proceso de Trabajo */
+        .process-section {
+            background-color: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3.5rem 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .step-number { font-size: 2.5rem; font-weight: 800; color: #64748b; line-height: 1; margin-bottom: 0.5rem; }
+        .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Zonas de Cobertura con Imágenes Reales y Contraste Mejorado */
+        .regions-section {
+            background-color: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3.5rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
         .regions-grid-visual {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -23,17 +222,16 @@
             background-position: center;
         }
 
-        /* Capa oscura superpuesta para asegurar legibilidad del texto */
+        /* Capa oscura fuerte para asegurar legibilidad total */
         .region-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.85) 100%);
             z-index: 1;
             transition: var(--transition);
         }
 
-        /* Imágenes de fondo representativas optimizadas */
         .region-caba { background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=600'); }
         .region-cordoba { background-image: url('https://images.pexels.com/photos/1654698/pexels-photo-1654698.jpeg?auto=compress&cs=tinysrgb&w=600'); }
         .region-rosario { background-image: url('https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=600'); }
@@ -44,9 +242,9 @@
 
         .region-card h3 {
             color: var(--white);
-            font-size: 1.15rem;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.8);
             z-index: 2;
         }
 
@@ -54,12 +252,12 @@
             color: var(--white);
             background-color: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(4px);
-            width: 32px; height: 32px;
+            width: 34px; height: 34px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
+            font-weight: 900;
             transition: var(--transition);
             flex-shrink: 0;
             z-index: 2;
@@ -70,58 +268,210 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.25);
         }
 
-        .region-card:hover::before {
-            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-        }
-
         .region-card:hover .region-arrow {
             background-color: var(--white);
             color: var(--primary);
             transform: translateX(4px);
         }
+
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: var(--whatsapp); color: white;
+            padding: 12px 20px; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(30, 190, 93, 0.4);
+            z-index: 1000; display: flex; align-items: center; gap: 8px;
+        }
+
+        footer { background-color: var(--bg-dark); color: #94a3b8; text-align: center; padding: 2.5rem 1rem; font-size: 0.875rem; }
     </style>
+</head>
+<body>
 
-    <!-- Cobertura Regional con Imágenes -->
-    <div class="regions-section">
-        <div class="section-header" style="margin-bottom: 2rem;">
-            <h2>Cobertura en todo el país</h2>
-            <p>Conocé nuestras propuestas específicas adaptadas a cada región:</p>
+    <header>
+        <a href="index.html" class="brand-logo" aria-label="Ir al inicio de Agencia Web">
+            <div class="logo-icon">W</div>
+            <div class="logo-text">
+                Agencia Web
+                <span>Soluciones Digitales</span>
+            </div>
+        </a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener" aria-label="Pedir presupuesto por WhatsApp">Pedir Presupuesto</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-pill">✨ Desarrollo Web Profesional & E-commerce</div>
+            <h1>Creamos páginas web que impulsan tu <span>negocio al siguiente nivel</span></h1>
+            <p>Diseñamos sitios rápidos, modernos, 100% autoadministrables y optimizados para convertir visitantes en clientes reales.</p>
+            <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20empezar%20mi%20proyecto%20web" class="btn-primary" target="_blank" rel="noopener">Iniciar mi Proyecto</a>
         </div>
-        
-        <div class="regions-grid-visual">
-            <a href="caba.html" class="region-card region-caba" aria-label="Diseño web en CABA">
-                <h3>CABA</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
+    </section>
 
-            <a href="cordoba.html" class="region-card region-cordoba" aria-label="Diseño web en Córdoba">
-                <h3>Córdoba</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="rosario.html" class="region-card region-rosario" aria-label="Diseño web en Rosario">
-                <h3>Rosario</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="mendoza.html" class="region-card region-mendoza" aria-label="Diseño web en Mendoza">
-                <h3>Mendoza</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="ushuaia.html" class="region-card region-ushuaia" aria-label="Diseño web en Ushuaia">
-                <h3>Ushuaia</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="iguazu.html" class="region-card region-iguazu" aria-label="Diseño web en Cataratas del Iguazú">
-                <h3>Cataratas del Iguazú</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="posadas.html" class="region-card region-posadas" aria-label="Diseño web en Posadas">
-                <h3>Posadas</h3>
-                <span class="region-arrow" aria-hidden="true">→</span>
-            </a>
+    <!-- Imagen Principal del Mockup -->
+    <div class="showcase-container">
+        <div class="mockup-frame">
+            <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diseño web profesional multipantalla" width="1200" height="800" fetchpriority="high">
         </div>
     </div>
+
+    <main class="container">
+        
+        <!-- Servicios Principales -->
+        <div class="section-header">
+            <h2>Soluciones digitales principales</h2>
+            <p>Herramientas potentes y escalables pensadas para cada tipo de proyecto corporativo o de ventas.</p>
+        </div>
+
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon" aria-hidden="true">🚀</div>
+                <h3>Páginas Web Corporativas</h3>
+                <p>Ideal para profesionales y PyMEs que necesitan una presencia online seria, moderna y de alto impacto.</p>
+                <ul class="checks-list">
+                    <li>Diseño 100% adaptable a celulares</li>
+                    <li>Optimización SEO técnico básico</li>
+                    <li>Botones de contacto y WhatsApp directos</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20página%20web%20corporativa" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener" aria-label="Consultar sobre páginas corporativas">Consultar ahora</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon" aria-hidden="true">🛍️</div>
+                <h3>Tiendas Online (E-commerce)</h3>
+                <p>Vendé tus productos las 24 horas con carritos de compra seguros, gestión de stock y pagos integrados.</p>
+                <ul class="checks-list">
+                    <li>Pasarelas de pago y envíos integrados</li>
+                    <li>Panel autoadministrable fácil de usar</li>
+                    <li>Diseño enfocado en conversión de ventas</li>
+                </ul>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20tienda%20online" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener" aria-label="Consultar sobre tiendas online">Consultar ahora</a>
+            </div>
+        </div>
+
+        <!-- Sección de Subpáginas por Industria -->
+        <div class="industries-box">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Servicios de diseño web por industria</h2>
+                <p>Explorá las soluciones específicas que diseñamos para cada sector comercial:</p>
+            </div>
+            <div class="industries-list">
+                <a href="bodegas.html" class="industry-link-card">
+                    ↳ Diseño web para bodegas y enoturismo
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="clinicas.html" class="industry-link-card">
+                    ↳ Diseño web para clínicas y salud
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="hoteles.html" class="industry-link-card">
+                    ↳ Diseño web para hoteles y turismo
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="estetica.html" class="industry-link-card">
+                    ↳ Diseño web para centros de estética
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="gastronomia.html" class="industry-link-card">
+                    ↳ Diseño web para restaurantes y gastronomía
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="legales.html" class="industry-link-card">
+                    ↳ Diseño web para estudios contables y legales
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="logistica.html" class="industry-link-card">
+                    ↳ Diseño web para empresas de logística
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Proceso de Trabajo -->
+        <div class="process-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Cómo trabajamos</h2>
+                <p>Un proceso transparente, ordenado y sin complicaciones para entregar tu web a tiempo.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Estrategia & Brief</h3>
+                    <p>Analizamos tu negocio, tus objetivos y definimos la estructura ideal.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Diseño & Desarrollo</h3>
+                    <p>Creamos un diseño moderno, responsive y optimizado para alto rendimiento.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Revisión & Ajustes</h3>
+                    <p>Probamos el sitio en conjunto y realizamos los retoques necesarios.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Lanzamiento</h3>
+                    <p>Tu web queda online, indexada en Google y lista para vender.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cobertura Regional con Imágenes -->
+        <div class="regions-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Cobertura en todo el país</h2>
+                <p>Conocé nuestras propuestas específicas adaptadas a cada región:</p>
+            </div>
+            
+            <div class="regions-grid-visual">
+                <a href="caba.html" class="region-card region-caba" aria-label="Diseño web en CABA">
+                    <h3>CABA</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="cordoba.html" class="region-card region-cordoba" aria-label="Diseño web en Córdoba">
+                    <h3>Córdoba</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="rosario.html" class="region-card region-rosario" aria-label="Diseño web en Rosario">
+                    <h3>Rosario</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="mendoza.html" class="region-card region-mendoza" aria-label="Diseño web en Mendoza">
+                    <h3>Mendoza</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="ushuaia.html" class="region-card region-ushuaia" aria-label="Diseño web en Ushuaia">
+                    <h3>Ushuaia</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="iguazu.html" class="region-card region-iguazu" aria-label="Diseño web en Cataratas del Iguazú">
+                    <h3>Cataratas del Iguazú</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+
+                <a href="posadas.html" class="region-card region-posadas" aria-label="Diseño web en Posadas">
+                    <h3>Posadas</h3>
+                    <span class="region-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <a href="https://wa.me/5492236743622?text=Hola,%2520vengo%2520de%2520la%2520web%2520y%2520quiero%2520asesoramiento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+        💬 WhatsApp
+    </a>
+
+    <footer>
+        <p>© 2026 Agencia Web — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
