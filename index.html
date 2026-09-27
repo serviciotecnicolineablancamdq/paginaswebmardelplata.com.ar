@@ -6,9 +6,13 @@
     <meta name="description" content="Diseño web profesional, tiendas online y desarrollo por industrias en Mar del Plata y todo el país. Sitios rápidos, modernos y optimizados para convertir.">
     <title>Diseño Web Profesional y Tiendas Online | Páginas Web</title>
 
+    <!-- Optimización de carga de fuentes para evitar bloqueo de renderizado -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
 
     <style>
         :root {
@@ -20,7 +24,7 @@
             --bg-light: #f8fafc;
             --white: #ffffff;
             --border-color: #e2e8f0;
-            --whatsapp: #1ebe5d; /* Color ajustado para mejor contraste */
+            --whatsapp: #1ebe5d;
             --transition: all 0.3s ease;
         }
 
@@ -181,7 +185,6 @@
             margin-top: 2.5rem;
         }
 
-        /* Color mejorado para contraste */
         .step-number { font-size: 2.5rem; font-weight: 800; color: #64748b; line-height: 1; margin-bottom: 0.5rem; }
         .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
@@ -259,19 +262,9 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        .region-card:hover img {
-            transform: scale(1.08);
-        }
-
-        .region-card:hover .region-overlay {
-            background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.5) 60%);
-        }
-
-        .region-card:hover .region-arrow {
-            background-color: var(--white);
-            color: var(--primary);
-            transform: translateX(4px);
-        }
+        .region-card:hover img { transform: scale(1.08); }
+        .region-card:hover .region-overlay { background: linear-gradient(to top, rgba(37, 99, 235, 0.9) 0%, rgba(15, 23, 42, 0.5) 60%); }
+        .region-card:hover .region-arrow { background-color: var(--white); color: var(--primary); transform: translateX(4px); }
 
         .whatsapp-float {
             position: fixed; bottom: 20px; right: 20px;
@@ -288,14 +281,14 @@
 <body>
 
     <header>
-        <a href="index.html" class="brand-logo">
+        <a href="index.html" class="brand-logo" aria-label="Ir al inicio de Agencia Web">
             <div class="logo-icon">W</div>
             <div class="logo-text">
                 Agencia Web
                 <span>Soluciones Digitales</span>
             </div>
         </a>
-        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener">Pedir Presupuesto</a>
+        <a href="https://wa.me/5492236743622?text=Hola,%20quiero%20solicitar%20un%20presupuesto" class="btn-header" target="_blank" rel="noopener" aria-label="Pedir presupuesto por WhatsApp">Pedir Presupuesto</a>
     </header>
 
     <!-- Hero Section -->
@@ -325,7 +318,7 @@
 
         <div class="grid-cards">
             <div class="card">
-                <div class="card-icon">🚀</div>
+                <div class="card-icon" aria-hidden="true">🚀</div>
                 <h3>Páginas Web Corporativas</h3>
                 <p>Ideal para profesionales y PyMEs que necesitan una presencia online seria, moderna y de alto impacto.</p>
                 <ul class="checks-list">
@@ -333,11 +326,11 @@
                     <li>Optimización SEO técnico básico</li>
                     <li>Botones de contacto y WhatsApp directos</li>
                 </ul>
-                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20página%20web%20corporativa" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener">Consultar ahora</a>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20página%20web%20corporativa" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener" aria-label="Consultar sobre páginas corporativas">Consultar ahora</a>
             </div>
 
             <div class="card">
-                <div class="card-icon">🛍️</div>
+                <div class="card-icon" aria-hidden="true">🛍️</div>
                 <h3>Tiendas Online (E-commerce)</h3>
                 <p>Vendé tus productos las 24 horas con carritos de compra seguros, gestión de stock y pagos integrados.</p>
                 <ul class="checks-list">
@@ -345,7 +338,7 @@
                     <li>Panel autoadministrable fácil de usar</li>
                     <li>Diseño enfocado en conversión de ventas</li>
                 </ul>
-                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20tienda%20online" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener">Consultar ahora</a>
+                <a href="https://wa.me/5492236743622?text=Hola,%20me%20interesa%20una%20tienda%20online" class="btn-header" style="display: block; text-align: center;" target="_blank" rel="noopener" aria-label="Consultar sobre tiendas online">Consultar ahora</a>
             </div>
         </div>
 
@@ -358,36 +351,36 @@
             <div class="industries-list">
                 <a href="bodegas.html" class="industry-link-card">
                     ↳ Diseño web para bodegas y enoturismo
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="clinicas.html" class="industry-link-card">
                     ↳ Diseño web para clínicas y salud
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="hoteles.html" class="industry-link-card">
                     ↳ Diseño web para hoteles y turismo
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="estetica.html" class="industry-link-card">
                     ↳ Diseño web para centros de estética
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="gastronomia.html" class="industry-link-card">
                     ↳ Diseño web para restaurantes y gastronomía
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="legales.html" class="industry-link-card">
                     ↳ Diseño web para estudios contables y legales
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
                 <a href="logistica.html" class="industry-link-card">
                     ↳ Diseño web para empresas de logística
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
             </div>
         </div>
 
-        <!-- Proceso de Trabajo (Encabezados corregidos a <h3>) -->
+        <!-- Proceso de Trabajo -->
         <div class="process-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2>Cómo trabajamos</h2>
@@ -425,59 +418,59 @@
             </div>
             
             <div class="regions-grid-visual">
-                <a href="caba.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%232c3e50' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECABA%3C/text%3E%3C/svg%3E" alt="CABA - Buenos Aires" width="600" height="600" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <a href="caba.html" class="region-card" aria-label="Diseño web en CABA">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%232c3e50' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECABA%3C/text%3E%3C/svg%3E" alt="CABA" width="600" height="600" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                     <div class="region-overlay">
                         <h3>CABA</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="cordoba.html" class="region-card">
+                <a href="cordoba.html" class="region-card" aria-label="Diseño web en Córdoba">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23e74c3c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECórdoba%3C/text%3E%3C/svg%3E" alt="Córdoba" width="600" height="600" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                     <div class="region-overlay">
                         <h3>Córdoba</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="rosario.html" class="region-card">
+                <a href="rosario.html" class="region-card" aria-label="Diseño web en Rosario">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%233498db' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ERosario%3C/text%3E%3C/svg%3E" alt="Rosario" width="600" height="600" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                     <div class="region-overlay">
                         <h3>Rosario</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="mendoza.html" class="region-card">
+                <a href="mendoza.html" class="region-card" aria-label="Diseño web en Mendoza">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%239b59b6' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EMendoza%3C/text%3E%3C/svg%3E" alt="Mendoza" width="600" height="600" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
                     <div class="region-overlay">
                         <h3>Mendoza</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="ushuaia.html" class="region-card">
+                <a href="ushuaia.html" class="region-card" aria-label="Diseño web en Ushuaia">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%231abc9c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EUshuaia%3C/text%3E%3C/svg%3E" alt="Ushuaia" width="600" height="600" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
                     <div class="region-overlay">
                         <h3>Ushuaia</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="iguazu.html" class="region-card">
+                <a href="iguazu.html" class="region-card" aria-label="Diseño web en Cataratas del Iguazú">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%2327ae60' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='%23ecf0f1'%3ECataratas del Iguazú%3C/text%3E%3C/svg%3E" alt="Cataratas del Iguazú" width="600" height="600" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);">
                     <div class="region-overlay">
                         <h3>Cataratas del Iguazú</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
 
-                <a href="posadas.html" class="region-card">
+                <a href="posadas.html" class="region-card" aria-label="Diseño web en Posadas">
                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23f39c12' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EPosadas%3C/text%3E%3C/svg%3E" alt="Posadas" width="600" height="600" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
                     <div class="region-overlay">
                         <h3>Posadas</h3>
-                        <span class="region-arrow">→</span>
+                        <span class="region-arrow" aria-hidden="true">→</span>
                     </div>
                 </a>
             </div>
@@ -485,7 +478,7 @@
 
     </main>
 
-    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener">
+    <a href="https://wa.me/5492236743622?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20asesoramiento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
         💬 WhatsApp
     </a>
 
