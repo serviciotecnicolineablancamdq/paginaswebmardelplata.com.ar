@@ -20,7 +20,7 @@
             --bg-light: #f8fafc;
             --white: #ffffff;
             --border-color: #e2e8f0;
-            --whatsapp: #25d366;
+            --whatsapp: #1ebe5d; /* Color ajustado para mejor contraste */
             --transition: all 0.3s ease;
         }
 
@@ -181,11 +181,12 @@
             margin-top: 2.5rem;
         }
 
-        .step-number { font-size: 2.5rem; font-weight: 800; color: #cbd5e1; line-height: 1; margin-bottom: 0.5rem; }
-        .process-step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        /* Color mejorado para contraste */
+        .step-number { font-size: 2.5rem; font-weight: 800; color: #64748b; line-height: 1; margin-bottom: 0.5rem; }
+        .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
         .process-step p { font-size: 0.9rem; color: var(--text-muted); }
 
-        /* Zonas de Cobertura - MEJORADO PARA MEJOR VISIBILIDAD */
+        /* Zonas de Cobertura */
         .regions-section {
             background-color: var(--white);
             border-radius: 20px;
@@ -221,7 +222,6 @@
             transition: transform 0.5s ease;
         }
 
-        /* OVERLAY MEJORADO: Gradiente más oscuro y opacity mayor para mejor visibilidad */
         .region-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -278,7 +278,7 @@
             background-color: var(--whatsapp); color: white;
             padding: 12px 20px; border-radius: 50px;
             text-decoration: none; font-weight: 700; font-size: 0.95rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 20px rgba(30, 190, 93, 0.4);
             z-index: 1000; display: flex; align-items: center; gap: 8px;
         }
 
@@ -308,10 +308,10 @@
         </div>
     </section>
 
-    <!-- Imagen Mockup Visual -->
+    <!-- Imagen Mockup Visual optimizada para LCP -->
     <div class="showcase-container">
         <div class="mockup-frame">
-            <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diseño web profesional multipantalla">
+            <img src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Diseño web profesional multipantalla" width="1200" height="800" fetchpriority="high">
         </div>
     </div>
 
@@ -387,7 +387,7 @@
             </div>
         </div>
 
-        <!-- Proceso de Trabajo -->
+        <!-- Proceso de Trabajo (Encabezados corregidos a <h3>) -->
         <div class="process-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2>Cómo trabajamos</h2>
@@ -396,28 +396,28 @@
             <div class="process-grid">
                 <div class="process-step">
                     <div class="step-number">01</div>
-                    <h4>Estrategia & Brief</h4>
+                    <h3>Estrategia & Brief</h3>
                     <p>Analizamos tu negocio, tus objetivos y definimos la estructura ideal.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">02</div>
-                    <h4>Diseño & Desarrollo</h4>
+                    <h3>Diseño & Desarrollo</h3>
                     <p>Creamos un diseño moderno, responsive y optimizado para alto rendimiento.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">03</div>
-                    <h4>Revisión & Ajustes</h4>
+                    <h3>Revisión & Ajustes</h3>
                     <p>Probamos el sitio en conjunto y realizamos los retoques necesarios.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">04</div>
-                    <h4>Lanzamiento</h4>
+                    <h3>Lanzamiento</h3>
                     <p>Tu web queda online, indexada en Google y lista para vender.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Cobertura Regional - CON COLORES DEGRADADOS CONFIABLES -->
+        <!-- Cobertura Regional -->
         <div class="regions-section">
             <div class="section-header" style="margin-bottom: 2rem;">
                 <h2>Cobertura en todo el país</h2>
@@ -425,63 +425,56 @@
             </div>
             
             <div class="regions-grid-visual">
-                <!-- CABA - Buenos Aires (Ciudad) -->
                 <a href="caba.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%232c3e50' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECABA%3C/text%3E%3C/svg%3E" alt="CABA - Buenos Aires" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%232c3e50' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECABA%3C/text%3E%3C/svg%3E" alt="CABA - Buenos Aires" width="600" height="600" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                     <div class="region-overlay">
                         <h3>CABA</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Córdoba -->
                 <a href="cordoba.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23e74c3c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECórdoba%3C/text%3E%3C/svg%3E" alt="Córdoba" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23e74c3c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ECórdoba%3C/text%3E%3C/svg%3E" alt="Córdoba" width="600" height="600" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                     <div class="region-overlay">
                         <h3>Córdoba</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Rosario - Santa Fe -->
                 <a href="rosario.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%233498db' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ERosario%3C/text%3E%3C/svg%3E" alt="Rosario" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%233498db' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3ERosario%3C/text%3E%3C/svg%3E" alt="Rosario" width="600" height="600" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                     <div class="region-overlay">
                         <h3>Rosario</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Mendoza - Viñedos -->
                 <a href="mendoza.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%239b59b6' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EMendoza%3C/text%3E%3C/svg%3E" alt="Mendoza" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%239b59b6' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EMendoza%3C/text%3E%3C/svg%3E" alt="Mendoza" width="600" height="600" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
                     <div class="region-overlay">
                         <h3>Mendoza</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Ushuaia - Fin del Mundo -->
                 <a href="ushuaia.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%231abc9c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EUshuaia%3C/text%3E%3C/svg%3E" alt="Ushuaia" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%231abc9c' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EUshuaia%3C/text%3E%3C/svg%3E" alt="Ushuaia" width="600" height="600" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
                     <div class="region-overlay">
                         <h3>Ushuaia</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Cataratas del Iguazú - Misiones -->
                 <a href="iguazu.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%2327ae60' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='%23ecf0f1'%3ECataratas del Iguazú%3C/text%3E%3C/svg%3E" alt="Cataratas del Iguazú" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%2327ae60' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='%23ecf0f1'%3ECataratas del Iguazú%3C/text%3E%3C/svg%3E" alt="Cataratas del Iguazú" width="600" height="600" style="background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);">
                     <div class="region-overlay">
                         <h3>Cataratas del Iguazú</h3>
                         <span class="region-arrow">→</span>
                     </div>
                 </a>
 
-                <!-- Posadas - Misiones -->
                 <a href="posadas.html" class="region-card">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23f39c12' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EPosadas%3C/text%3E%3C/svg%3E" alt="Posadas" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect fill='%23f39c12' width='600' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23ecf0f1'%3EPosadas%3C/text%3E%3C/svg%3E" alt="Posadas" width="600" height="600" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
                     <div class="region-overlay">
                         <h3>Posadas</h3>
                         <span class="region-arrow">→</span>
